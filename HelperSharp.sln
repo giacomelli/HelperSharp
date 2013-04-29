@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperSharp", "HelperSharp\HelperSharp.csproj", "{25E1AB57-401D-43EF-8E89-36CD59EBB9BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperSharp.UnitTests", "HelperSharp.UnitTests\HelperSharp.UnitTests.csproj", "{6E862BD0-5715-43A1-AF83-8D0CE4D76808}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{25E1AB57-401D-43EF-8E89-36CD59EBB9BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25E1AB57-401D-43EF-8E89-36CD59EBB9BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25E1AB57-401D-43EF-8E89-36CD59EBB9BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25E1AB57-401D-43EF-8E89-36CD59EBB9BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E862BD0-5715-43A1-AF83-8D0CE4D76808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E862BD0-5715-43A1-AF83-8D0CE4D76808}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E862BD0-5715-43A1-AF83-8D0CE4D76808}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E862BD0-5715-43A1-AF83-8D0CE4D76808}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = HelperSharp\HelperSharp.csproj
+	EndGlobalSection
+EndGlobal
