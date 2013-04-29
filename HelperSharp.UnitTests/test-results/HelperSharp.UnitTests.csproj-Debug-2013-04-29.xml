@@ -183,6 +183,20 @@ Tempo de execução: 41,08ms</Message>
 
 Tempo de execução: 0,38ms</Message>
     </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2013-04-29T15:14:36</TestDate>
+      <Passed>24</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Teste bem sucedido
+
+Tempo de execução: 0,28ms</Message>
+    </UnitTestResult>
   </Results>
   <Tests>
     <TestRecord Name="HelperSharp">
@@ -369,6 +383,20 @@ Tempo de execução: 41,08ms</Message>
 
 Tempo de execução: 0,37ms</Message>
         </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2013-04-29T15:14:36</TestDate>
+          <Passed>24</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Teste bem sucedido
+
+Tempo de execução: 0,27ms</Message>
+        </UnitTestResult>
       </Results>
       <Tests>
         <TestRecord Name="UnitTests">
@@ -554,6 +582,20 @@ Tempo de execução: 41,08ms</Message>
               <Message>Teste bem sucedido
 
 Tempo de execução: 0,37ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-04-29T15:14:36</TestDate>
+              <Passed>24</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Teste bem sucedido
+
+Tempo de execução: 0,27ms</Message>
             </UnitTestResult>
           </Results>
           <Tests>
@@ -752,6 +794,20 @@ Tempo de execução: 0,71ms</Message>
                   <Message>Teste bem sucedido
 
 Tempo de execução: 0,02ms</Message>
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-04-29T15:14:36</TestDate>
+                  <Passed>3</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Teste bem sucedido
+
+Tempo de execução: 0,03ms</Message>
                 </UnitTestResult>
               </Results>
               <Tests>
@@ -981,6 +1037,22 @@ Tempo de execução: 0,02ms</Message>
                       <ConsoleOutput />
                       <ConsoleError />
                     </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,02ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
                   </Results>
                   <Tests />
                 </TestRecord>
@@ -1196,6 +1268,22 @@ Tempo de execução: 0,00ms</Message>
                     </UnitTestResult>
                     <UnitTestResult>
                       <TestDate>2013-04-29T14:55:06</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
                       <Passed>1</Passed>
                       <Errors>0</Errors>
                       <Failures>0</Failures>
@@ -1442,6 +1530,22 @@ Tempo de execução: 0,00ms</Message>
                       <ConsoleOutput />
                       <ConsoleError />
                     </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
                   </Results>
                   <Tests />
                 </TestRecord>
@@ -1563,6 +1667,20 @@ Tempo de execução: 40,01ms</Message>
                 </UnitTestResult>
                 <UnitTestResult>
                   <TestDate>2013-04-29T14:55:06</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Teste bem sucedido
+
+Tempo de execução: 0,03ms</Message>
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-04-29T15:14:36</TestDate>
                   <Passed>1</Passed>
                   <Errors>0</Errors>
                   <Failures>0</Failures>
@@ -1739,6 +1857,22 @@ Tempo de execução: 0,03ms</Message>
                       <ConsoleOutput />
                       <ConsoleError />
                     </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,03ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
                   </Results>
                   <Tests />
                 </TestRecord>
@@ -1860,6 +1994,20 @@ Tempo de execução: 0,01ms</Message>
                 </UnitTestResult>
                 <UnitTestResult>
                   <TestDate>2013-04-29T14:55:06</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Teste bem sucedido
+
+Tempo de execução: 0,00ms</Message>
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-04-29T15:14:36</TestDate>
                   <Passed>1</Passed>
                   <Errors>0</Errors>
                   <Failures>0</Failures>
@@ -2020,6 +2168,22 @@ Tempo de execução: 0,00ms</Message>
                       <ConsoleOutput />
                       <ConsoleError />
                     </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
                   </Results>
                   <Tests />
                 </TestRecord>
@@ -2141,6 +2305,20 @@ Tempo de execução: 0,03ms</Message>
                 </UnitTestResult>
                 <UnitTestResult>
                   <TestDate>2013-04-29T14:55:06</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Teste bem sucedido
+
+Tempo de execução: 0,01ms</Message>
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-04-29T15:14:36</TestDate>
                   <Passed>1</Passed>
                   <Errors>0</Errors>
                   <Failures>0</Failures>
@@ -2301,6 +2479,22 @@ Tempo de execução: 0,01ms</Message>
                       <ConsoleOutput />
                       <ConsoleError />
                     </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,01ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
                   </Results>
                   <Tests />
                 </TestRecord>
@@ -2422,6 +2616,20 @@ Tempo de execução: 0,01ms</Message>
                 </UnitTestResult>
                 <UnitTestResult>
                   <TestDate>2013-04-29T14:55:06</TestDate>
+                  <Passed>2</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Teste bem sucedido
+
+Tempo de execução: 0,01ms</Message>
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-04-29T15:14:36</TestDate>
                   <Passed>2</Passed>
                   <Errors>0</Errors>
                   <Failures>0</Failures>
@@ -2568,6 +2776,22 @@ Tempo de execução: 0,00ms</Message>
                     </UnitTestResult>
                     <UnitTestResult>
                       <TestDate>2013-04-29T14:55:06</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
                       <Passed>1</Passed>
                       <Errors>0</Errors>
                       <Failures>0</Failures>
@@ -2731,6 +2955,22 @@ Tempo de execução: 0,00ms</Message>
                       <ConsoleOutput />
                       <ConsoleError />
                     </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
                   </Results>
                   <Tests />
                 </TestRecord>
@@ -2839,6 +3079,20 @@ Tempo de execução: 0,03ms</Message>
                 <UnitTestResult>
                   <TestDate>2013-04-29T14:55:06</TestDate>
                   <Passed>6</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Teste bem sucedido
+
+Tempo de execução: 0,02ms</Message>
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-04-29T15:14:36</TestDate>
+                  <Passed>5</Passed>
                   <Errors>0</Errors>
                   <Failures>0</Failures>
                   <Inconclusive>0</Inconclusive>
@@ -2968,6 +3222,22 @@ Tempo de execução: 0,00ms</Message>
                     </UnitTestResult>
                     <UnitTestResult>
                       <TestDate>2013-04-29T14:55:06</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
                       <Passed>1</Passed>
                       <Errors>0</Errors>
                       <Failures>0</Failures>
@@ -3115,6 +3385,22 @@ Tempo de execução: 0,00ms</Message>
                       <ConsoleOutput />
                       <ConsoleError />
                     </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
                   </Results>
                   <Tests />
                 </TestRecord>
@@ -3234,6 +3520,22 @@ Tempo de execução: 0,00ms</Message>
                     </UnitTestResult>
                     <UnitTestResult>
                       <TestDate>2013-04-29T14:55:06</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
                       <Passed>1</Passed>
                       <Errors>0</Errors>
                       <Failures>0</Failures>
@@ -3514,6 +3816,22 @@ Tempo de execução: 0,00ms</Message>
                       <ConsoleOutput />
                       <ConsoleError />
                     </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
                   </Results>
                   <Tests />
                 </TestRecord>
@@ -3633,6 +3951,22 @@ Tempo de execução: 0,00ms</Message>
                     </UnitTestResult>
                     <UnitTestResult>
                       <TestDate>2013-04-29T14:55:06</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
                       <Passed>1</Passed>
                       <Errors>0</Errors>
                       <Failures>0</Failures>
@@ -3780,6 +4114,20 @@ Tempo de execução: 0,12ms</Message>
 
 Tempo de execução: 0,11ms</Message>
                 </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-04-29T15:14:36</TestDate>
+                  <Passed>11</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Teste bem sucedido
+
+Tempo de execução: 0,10ms</Message>
+                </UnitTestResult>
               </Results>
               <Tests>
                 <TestRecord Name="CountWordTest">
@@ -3914,6 +4262,22 @@ Tempo de execução: 0,00ms</Message>
                     </UnitTestResult>
                     <UnitTestResult>
                       <TestDate>2013-04-29T14:55:06</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
                       <Passed>1</Passed>
                       <Errors>0</Errors>
                       <Failures>0</Failures>
@@ -4077,6 +4441,22 @@ Tempo de execução: 0,07ms</Message>
                       <ConsoleOutput />
                       <ConsoleError />
                     </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,05ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
                   </Results>
                   <Tests />
                 </TestRecord>
@@ -4212,6 +4592,22 @@ Tempo de execução: 0,00ms</Message>
                     </UnitTestResult>
                     <UnitTestResult>
                       <TestDate>2013-04-29T14:55:06</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
                       <Passed>1</Passed>
                       <Errors>0</Errors>
                       <Failures>0</Failures>
@@ -4375,6 +4771,22 @@ Tempo de execução: 0,00ms</Message>
                       <ConsoleOutput />
                       <ConsoleError />
                     </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
                   </Results>
                   <Tests />
                 </TestRecord>
@@ -4510,6 +4922,22 @@ Tempo de execução: 0,00ms</Message>
                     </UnitTestResult>
                     <UnitTestResult>
                       <TestDate>2013-04-29T14:55:06</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
                       <Passed>1</Passed>
                       <Errors>0</Errors>
                       <Failures>0</Failures>
@@ -4673,6 +5101,22 @@ Tempo de execução: 0,00ms</Message>
                       <ConsoleOutput />
                       <ConsoleError />
                     </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
                   </Results>
                   <Tests />
                 </TestRecord>
@@ -4808,6 +5252,22 @@ Tempo de execução: 0,01ms</Message>
                     </UnitTestResult>
                     <UnitTestResult>
                       <TestDate>2013-04-29T14:55:06</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,01ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
                       <Passed>1</Passed>
                       <Errors>0</Errors>
                       <Failures>0</Failures>
@@ -4971,6 +5431,22 @@ Tempo de execução: 0,01ms</Message>
                       <ConsoleOutput />
                       <ConsoleError />
                     </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,01ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
                   </Results>
                   <Tests />
                 </TestRecord>
@@ -5106,6 +5582,22 @@ Tempo de execução: 0,00ms</Message>
                     </UnitTestResult>
                     <UnitTestResult>
                       <TestDate>2013-04-29T14:55:06</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
                       <Passed>1</Passed>
                       <Errors>0</Errors>
                       <Failures>0</Failures>
@@ -5269,6 +5761,22 @@ Tempo de execução: 0,00ms</Message>
                       <ConsoleOutput />
                       <ConsoleError />
                     </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
                   </Results>
                   <Tests />
                 </TestRecord>
@@ -5404,6 +5912,22 @@ Tempo de execução: 0,00ms</Message>
                     </UnitTestResult>
                     <UnitTestResult>
                       <TestDate>2013-04-29T14:55:06</TestDate>
+                      <Passed>1</Passed>
+                      <Errors>0</Errors>
+                      <Failures>0</Failures>
+                      <Inconclusive>0</Inconclusive>
+                      <NotRunnable>0</NotRunnable>
+                      <Skipped>0</Skipped>
+                      <Ignored>0</Ignored>
+                      <Time />
+                      <Message>Teste bem sucedido
+
+Tempo de execução: 0,00ms</Message>
+                      <ConsoleOutput />
+                      <ConsoleError />
+                    </UnitTestResult>
+                    <UnitTestResult>
+                      <TestDate>2013-04-29T15:14:36</TestDate>
                       <Passed>1</Passed>
                       <Errors>0</Errors>
                       <Failures>0</Failures>

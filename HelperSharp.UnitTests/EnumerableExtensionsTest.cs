@@ -65,13 +65,5 @@ namespace HelperSharp.UnitTests
 
             Assert.AreEqual("-Laranja-Banana-Limão-Maçã", fruits);
         }
-
-        [Test()]
-        public void JoinTest()
-        {
-            string fruits = fruitsArray.Join(", ");
-
-            Assert.AreEqual("Laranja, Banana, Limão, Maçã", fruits);
-        }
     }
 }

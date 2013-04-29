@@ -109,18 +109,5 @@ namespace HelperSharp
         }
 
         #endregion
-
-        #region Join
-       /// <summary>
-		/// Iterates in the collection calling the action for each item concatenating a separator.
-       /// </summary>
-       /// <param name="self">Self.</param>
-       /// <param name="separator">Separator.</param>
-       /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public static string Join<T>(this IEnumerable<T> self, string separator)
-        {
-            return String.Join(separator, values: self.ToArray());
-        }
-        #endregion
     }
 }
