@@ -100,7 +100,7 @@ namespace HelperSharp.UnitTests
         [Test()]
         public void RemoveAccentsTest()
         {
-            Assert.AreEqual("aaaaaeeeeiiooooouuuuncAAAAAEEEEIIOOOOOUUUUNC", "áàãâäéèêëíìóòõôöúùûüñçÁÀÃÂÄÉÈÊËÍÌÓÒÕÔÖÚÙÛÜÑÇ".RemoveAccents());
+			Assert.AreEqual("aaaaaeeeeiiooooouuuuncAAAAAEEEEIIOOOOOUUUUNC", "áàãâäéèêëíìóòõôöúùûüñçÁÀÃÂÄÉÈÊËÍÌÓÒÕÔÖÚÙÛÜÑÇ".RemoveAccents());
             Assert.AreEqual("Ideia ou ideia?", "Idéia ou ideia?".RemoveAccents());
             Assert.AreEqual("Para ou para?", "Pára ou para?".RemoveAccents());
         }
@@ -132,5 +132,19 @@ namespace HelperSharp.UnitTests
         {
             Assert.AreEqual("`1234567890-=qwertyuiop\\asdfghjklzxcvbnm/", "`1234567890-=q!wer?tyuiop,[]\\asdfghjkl;\'zxcvbnm,./".RemovePontuactions());
         }
+
+		[Test()]
+		public void InsertUnderscoreBeforeUpperCase_NullOrEmpty_ReturnsInput()
+		{
+			Assert.AreEqual(null, StringExtensions.InsertUnderscoreBeforeUpperCase(null));
+			Assert.AreEqual("", StringExtensions.InsertUnderscoreBeforeUpperCase(""));
+		}
+
+		[Test()]
+		public void InsertUnderscoreBeforeUpperCase_String_StringWithUpperCases()
+		{
+			Assert.AreEqual("One_Two_Three", StringExtensions.InsertUnderscoreBeforeUpperCase("OneTwoThree"));
+			Assert.AreEqual("One_Two_Three", StringExtensions.InsertUnderscoreBeforeUpperCase("One_Two_Three"));
+		}
     }
 }

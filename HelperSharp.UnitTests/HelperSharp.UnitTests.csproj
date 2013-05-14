@@ -44,6 +44,7 @@
     <Compile Include="DateTimeExtensionsTest.cs" />
     <Compile Include="EnumerableExtensionsTest.cs" />
     <Compile Include="StringExtensionsTest.cs" />
+    <Compile Include="EnumerableHelperTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HelperSharp\HelperSharp.csproj">

@@ -11,6 +11,10 @@ namespace HelperSharp
     /// </summary>
     public static class StringExtensions
     {
+		#region Fields
+		private static Regex s_insertUnderscoreBeforeUpperCase = new Regex(@"(?<!_|^)([A-Z])", RegexOptions.Compiled);
+		#endregion
+
         #region GetWordFromIndex
 		/// <summary>
 		/// Gets the index of the word from the source.
@@ -84,14 +88,18 @@ namespace HelperSharp
         /// <param name="source">Source.</param>
         public static string RemoveAccents(this string source)
         {
-            //8 bit characters 
-            byte[] b = Encoding.GetEncoding(1251).GetBytes(source);
+			var sourceNormalized = source.Normalize(NormalizationForm.FormD);
+			var result = new StringBuilder();
 
-            // 7 bit characters
-            string t = Encoding.ASCII.GetString(b);
-            Regex re = new Regex("[^a-zA-Z0-9]=-_/");
-            string c = re.Replace(t, " ");
-            return c;
+			for(int i = 0; i < sourceNormalized.Length; i++) {
+				var uc = CharUnicodeInfo.GetUnicodeCategory(sourceNormalized[i]);
+
+				if(uc != UnicodeCategory.NonSpacingMark) {
+					result.Append(sourceNormalized[i]);
+				}
+			}
+
+			return(result.ToString().Normalize(NormalizationForm.FormC));
         }
      
 
@@ -243,5 +251,22 @@ namespace HelperSharp
             return false;
         }
         #endregion
+
+		#region InsertUnderscore
+		/// <summary>
+		/// Inserts the underscore before every upper case char.
+		/// </summary>
+		/// <returns>The result string.</returns>
+		/// <param name="input">Input.</param>
+		public static string InsertUnderscoreBeforeUpperCase(this string input)
+		{
+			if(String.IsNullOrEmpty(input))
+			{
+				return input;
+			}
+
+			return s_insertUnderscoreBeforeUpperCase.Replace(input, "_$1");
+		}
+		#endregion
     }
 }

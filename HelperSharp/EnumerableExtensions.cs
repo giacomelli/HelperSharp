@@ -11,8 +11,7 @@ namespace HelperSharp
     /// Enumerable extensions.
     /// </summary>
     public static class EnumerableExtensions
-    {
-        #region GetTypes
+    {   
 		/// <summary>
 		/// Gets the types of the specified objects.
 		/// </summary>
@@ -44,9 +43,7 @@ namespace HelperSharp
             // Retorna o array de tipos.
             return parametersType.ToArray();
         }
-        #endregion
 
-        #region Each
 		/// <summary>
 		/// Iterates in the collection calling the action for each item.
 		/// </summary>
@@ -58,9 +55,6 @@ namespace HelperSharp
             foreach (var item in self) action(item);
         }
 
-        #endregion
-
-        #region Each (with index)
 		/// <summary>
 		/// Iterates in the collection calling the action for each item using index.
 		/// </summary>
@@ -74,9 +68,6 @@ namespace HelperSharp
             for (int i = 0; i < list.Count; i++) action(list[i], i);
         }
 
-        #endregion
-
-        #region ToString (function)
 		/// <summary>
 		/// Iterates in the collection calling the action for each item and concatenating the result.
 		/// </summary>
@@ -92,10 +83,7 @@ namespace HelperSharp
 
             return result.ToString();
         }
-
-        #endregion
-
-        #region ToString (format)
+		     
 		/// <summary>
 		/// Iterates in the collection calling the action for each item using String.Format.
 		/// </summary>
@@ -107,7 +95,6 @@ namespace HelperSharp
         {
             return self.ToString(i => String.Format(CultureInfo.InvariantCulture, format, i));
         }
-
-        #endregion
+	
     }
 }
