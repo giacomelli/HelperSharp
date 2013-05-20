@@ -268,5 +268,15 @@ namespace HelperSharp
 			return s_insertUnderscoreBeforeUpperCase.Replace(input, "_$1");
 		}
 		#endregion
+
+		/// <summary>
+		/// Format the specified string.
+		/// </summary>
+		/// <param name="source">Source.</param>
+		/// <param name="args">Arguments.</param>
+		public static string With(this string source, params object[] args)
+		{
+			return String.Format (CultureInfo.InvariantCulture, source, args);
+		}
     }
 }

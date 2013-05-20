@@ -146,5 +146,11 @@ namespace HelperSharp.UnitTests
 			Assert.AreEqual("One_Two_Three", StringExtensions.InsertUnderscoreBeforeUpperCase("OneTwoThree"));
 			Assert.AreEqual("One_Two_Three", StringExtensions.InsertUnderscoreBeforeUpperCase("One_Two_Three"));
 		}
+
+		[Test()]
+		public void With_SourceAndArgs_Formatted()
+		{
+			Assert.AreEqual ("A1b2", "A{0}b{1}".With (1, 2));
+		}
     }
 }
