@@ -1,19 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="HelperSharp.UnitTests\EnumerableExtensionsTest.cs">
-    <Files>
-      <File FileName="HelperSharp.UnitTests\EnumerableExtensionsTest.cs" Line="48" Column="61" />
-      <File FileName="c:\Users\giacomelli.CWINET\Documents\GitHub\HelperSharp\HelperSharp\EnumerableExtensions.cs" Line="112" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="HelperSharp" expanded="True">
-            <Node name="References" expanded="True" />
-          </Node>
-          <Node name="HelperSharp.UnitTests" expanded="True">
-            <Node name="EnumerableExtensionsTest.cs" selected="True" />
-          </Node>
+          <Node name="HelperSharp" expanded="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">
@@ -23,21 +14,12 @@
         <State />
       </Pad>
       <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State expanded="True" selected="True">
-          <Node name="HelperSharp.UnitTests" expanded="True">
-            <Node name="HelperSharp" expanded="True">
-              <Node name="UnitTests" expanded="True" />
-            </Node>
-          </Node>
-        </State>
+        <State expanded="True" selected="True" />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="C:\Users\giacomelli.CWINET\Documents\GitHub\HelperSharp\HelperSharp\CurrencyHelper.cs" line="14" column="20" />
-      <Breakpoint file="C:\Users\giacomelli.CWINET\Documents\GitHub\HelperSharp\HelperSharp.UnitTests\ArrayExtensionsTest.cs" line="15" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

@@ -110,7 +110,7 @@ namespace HelperSharp
         /// <param name="source">Source.</param>
         public static string RemoveNonAlphanumeric(this string source)
         {
-            return Regex.Replace(source, "[^0-9A-Za-záàãâäéèêëóòõôöúùûüñ]*", "");
+			return Regex.Replace(source, "[^0-9A-Za-záàãâäéèêëíìîïóòõôöúùûüñ]*", "");
         }
 
 		/// <summary>

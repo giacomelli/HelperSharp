@@ -19,5 +19,20 @@ namespace HelperSharp
 				throw new ArgumentNullException(argumentName);
 			}
 		}
+
+		/// <summary>
+		/// Throws an ArgumentNullException if argument is null or an ArgumentException if string is empty.
+		/// </summary>
+		/// <param name="argumentName">Argument name.</param>
+		/// <param name="argument">Argument.</param>
+		public static void ThrowIfNullOrEmpty(string argumentName, string argument)
+		{
+			ThrowIfNull (argumentName, argument);
+
+			if(string.IsNullOrEmpty(argument))
+			{
+				throw new ArgumentException ("Argument '{0}' can't be empty.".With(argumentName), argumentName);
+			}
+		}
 	}
 }

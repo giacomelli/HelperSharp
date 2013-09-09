@@ -118,7 +118,7 @@ namespace HelperSharp.UnitTests
         [Test()]
         public void RemoveNonAlphanumericTest()
         {
-            Assert.AreEqual("1234567890qwertyuiopasdfghjklzxcvbnm", "`1234567890-=qwertyuiop[]\\asdfghjkl;\'zxcvbnm,./".RemoveNonAlphanumeric());
+			Assert.AreEqual("1234567890qwertyuiopasdfghjklzxcvbnmáéíóú", "`1234567890-=qwertyuiop[]\\asdfghjkl;\'zxcvbnm,./áéíóú".RemoveNonAlphanumeric());
         }
 
         [Test()]
