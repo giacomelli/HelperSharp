@@ -1,5 +1,6 @@
 HelperSharp
 =========
+[![Build Status](https://travis-ci.org/giacomelli/HelperSharp.png?branch=master)](https://travis-ci.org/giacomelli/HelperSharp)
 
 A set of helpers and extensions for C# programming.
 
