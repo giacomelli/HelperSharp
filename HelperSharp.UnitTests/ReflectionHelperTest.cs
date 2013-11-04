@@ -79,9 +79,9 @@ namespace HelperSharp.UnitTests
         {
             var actual = ReflectionHelper.GetSubclassesOf(typeof(IStub), false);
             Assert.AreEqual(3, actual.Count);
-            Assert.AreEqual(typeof(StubBase), actual[0]);
-            Assert.AreEqual(typeof(Stub1), actual[1]);
-            Assert.AreEqual(typeof(Stub2), actual[2]);
+            Assert.AreEqual(typeof(Stub1), actual[0]);
+            Assert.AreEqual(typeof(Stub2), actual[1]);
+            Assert.AreEqual(typeof(StubBase), actual[2]);
 
             actual = ReflectionHelper.GetSubclassesOf(typeof(StubBase), false);
             Assert.AreEqual(1, actual.Count);

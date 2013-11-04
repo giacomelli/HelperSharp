@@ -90,7 +90,7 @@ namespace HelperSharp
                 types = types.Where(t => !t.IsInterface && !t.IsAbstract);
             }
 
-            return types.ToList();
+            return types.OrderBy(t => t.Name).ToList();
         }
 
         /// <summary>
