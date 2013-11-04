@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace HelperSharp
 {
@@ -14,7 +12,7 @@ namespace HelperSharp
        /// Removes the duplicates.
        /// </summary>
        /// <returns>The duplicates.</returns>
-       /// <param name="items">Items.</param>
+       /// <param name="items">The items.</param>
        /// <typeparam name="T">The 1st type parameter.</typeparam>
         public static T[] RemoveDuplicates<T>(this T[] items)
         {

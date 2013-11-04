@@ -23,16 +23,16 @@ namespace HelperSharp.UnitTests
         }
 
         [Test()]
-        public void EndsWithPontuactionTest()
+        public void EndsWithPunctuationTest()
         {
-            Assert.IsFalse("".EndsWithPontuaction());
-            Assert.IsFalse(" ".EndsWithPontuaction());
-            Assert.IsFalse(".N.T.r.i.c.k.s".EndsWithPontuaction());
-            Assert.IsTrue("HelperSharp.".EndsWithPontuaction());
-            Assert.IsTrue("HelperSharp!".EndsWithPontuaction());
-            Assert.IsTrue("HelperSharp?".EndsWithPontuaction());
-            Assert.IsTrue("HelperSharp;".EndsWithPontuaction());
-            Assert.IsTrue("HelperSharp,".EndsWithPontuaction());
+            Assert.IsFalse("".EndsWithPunctuation());
+            Assert.IsFalse(" ".EndsWithPunctuation());
+            Assert.IsFalse(".N.T.r.i.c.k.s".EndsWithPunctuation());
+            Assert.IsTrue("HelperSharp.".EndsWithPunctuation());
+            Assert.IsTrue("HelperSharp!".EndsWithPunctuation());
+            Assert.IsTrue("HelperSharp?".EndsWithPunctuation());
+            Assert.IsTrue("HelperSharp;".EndsWithPunctuation());
+            Assert.IsTrue("HelperSharp,".EndsWithPunctuation());
         }
 
         [Test()]
@@ -128,9 +128,9 @@ namespace HelperSharp.UnitTests
         }
 
         [Test()]
-        public void RemovePontuactionsTest()
+        public void RemovePunctuationsTest()
         {
-            Assert.AreEqual("`1234567890-=qwertyuiop\\asdfghjklzxcvbnm/", "`1234567890-=q!wer?tyuiop,[]\\asdfghjkl;\'zxcvbnm,./".RemovePontuactions());
+            Assert.AreEqual("`1234567890-=qwertyuiop\\asdfghjklzxcvbnm/", "`1234567890-=q!wer?tyuiop,[]\\asdfghjkl;\'zxcvbnm,./".RemovePunctuations());
         }
 
 		[Test()]

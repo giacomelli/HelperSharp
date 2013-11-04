@@ -11,33 +11,33 @@ namespace HelperSharp
     /// </summary>
     public static class StringExtensions
     {
-		#region Fields
-		private static Regex s_insertUnderscoreBeforeUpperCase = new Regex(@"(?<!_|^)([A-Z])", RegexOptions.Compiled);
-		#endregion
+        #region Fields
+        private static Regex s_insertUnderscoreBeforeUpperCase = new Regex(@"(?<!_|^)([A-Z])", RegexOptions.Compiled);
+        #endregion
 
         #region GetWordFromIndex
-		/// <summary>
-		/// Gets the index of the word from the source.
-		/// </summary>
-		/// <returns>The word from index.</returns>
-		/// <param name="source">Source.</param>
-		/// <param name="index">Index.</param>
+        /// <summary>
+        /// Gets the index of the word from the source.
+        /// </summary>
+        /// <returns>The word from index.</returns>
+        /// <param name="source">The source string.</param>
+        /// <param name="index">The index.</param>
         public static string GetWordFromIndex(this string source, int index)
         {
             int wordStartIndex;
             return GetWordFromIndex(source, index, out wordStartIndex);
         }
 
-		/// <summary>
-		/// Gets the index of the word from source.
-		/// </summary>
-		/// <returns>The word from index.</returns>
-		/// <param name="source">Source.</param>
-		/// <param name="index">Index.</param>
-		/// <param name="wordStartIndex">Word start index.</param>
-        [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "2#")]
+        /// <summary>
+        /// Gets the index of the word from source.
+        /// </summary>
+        /// <returns>The word from index.</returns>
+        /// <param name="source">The source string.</param>
+        /// <param name="index">The index.</param>
+        /// <param name="wordStartIndex">Word start index.</param>
+        [SuppressMessage("Microsoft.Design", "CA1021:AvoidOutParameters", MessageId = "2#", Justification = "It's necessary for the method purpose.")]
         public static string GetWordFromIndex(this String source, int index, out int wordStartIndex)
-        {         
+        {
             string[] words = source.Split(new char[1] { ' ' });
             int length = words.Length;
             int indexCounter = -1;
@@ -53,7 +53,7 @@ namespace HelperSharp
                     wordStartIndex = indexCounter - (currentWord.Length - 1);
                     return currentWord;
                 }
-                
+
                 // Soma o espaço em branco.
                 indexCounter++;
                 if (indexCounter == index)
@@ -73,7 +73,7 @@ namespace HelperSharp
         /// Counts the words.
         /// </summary>
         /// <returns>The words.</returns>
-        /// <param name="source">Source.</param>
+        /// <param name="source">The source string.</param>
         public static int CountWords(this string source)
         {
             return source.Split(new char[1] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Length;
@@ -85,102 +85,103 @@ namespace HelperSharp
         /// Removes the accents.
         /// </summary>
         /// <returns>The accents.</returns>
-        /// <param name="source">Source.</param>
+        /// <param name="source">The source string.</param>
         public static string RemoveAccents(this string source)
         {
-			var sourceNormalized = source.Normalize(NormalizationForm.FormD);
-			var result = new StringBuilder();
+            var sourceNormalized = source.Normalize(NormalizationForm.FormD);
+            var result = new StringBuilder();
 
-			for(int i = 0; i < sourceNormalized.Length; i++) {
-				var uc = CharUnicodeInfo.GetUnicodeCategory(sourceNormalized[i]);
+            for (int i = 0; i < sourceNormalized.Length; i++)
+            {
+                var uc = CharUnicodeInfo.GetUnicodeCategory(sourceNormalized[i]);
 
-				if(uc != UnicodeCategory.NonSpacingMark) {
-					result.Append(sourceNormalized[i]);
-				}
-			}
+                if (uc != UnicodeCategory.NonSpacingMark)
+                {
+                    result.Append(sourceNormalized[i]);
+                }
+            }
 
-			return(result.ToString().Normalize(NormalizationForm.FormC));
+            return result.ToString().Normalize(NormalizationForm.FormC);
         }
-     
 
         /// <summary>
         /// Removes the non alphanumeric chars.
         /// </summary>
         /// <returns>The non alphanumeric.</returns>
-        /// <param name="source">Source.</param>
+        /// <param name="source">The source string.</param>
         public static string RemoveNonAlphanumeric(this string source)
         {
-			return Regex.Replace(source, "[^0-9A-Za-záàãâäéèêëíìîïóòõôöúùûüñ]*", "");
-        }
-
-		/// <summary>
-		/// Removes the non numeric chars.
-		/// </summary>
-		/// <returns>The non numeric.</returns>
-		/// <param name="source">Source.</param>
-        [SuppressMessage("Microsoft.Naming", "CA1702:CompoundWordsShouldBeCasedCorrectly", MessageId = "NonNumeric")]        
-        public static string RemoveNonNumeric(this string source)
-        {
-            return Regex.Replace(source, "[^0-9]*", "");
-        }
-
-		/// <summary>
-		/// Removes the string "remove" from source borders.
-		/// </summary>
-		/// <returns>The from borders.</returns>
-		/// <param name="source">Source.</param>
-		/// <param name="remove">Remove.</param>
-        public static string RemoveFromBorders(this string source, string remove)
-        {            
-            remove = Regex.Escape(remove);
-            return Regex.Replace(source, String.Format(CultureInfo.InvariantCulture, "(^{0}|{1}$)", remove, remove), "", RegexOptions.IgnoreCase);
+            return Regex.Replace(source, "[^0-9A-Za-záàãâäéèêëíìîïóòõôöúùûüñ]*", String.Empty);
         }
 
         /// <summary>
-		/// Removes the chars "remove" from source borders.
+        /// Removes the non numeric chars.
+        /// </summary>
+        /// <returns>The non numeric.</returns>
+        /// <param name="source">The source string.</param>
+        [SuppressMessage("Microsoft.Naming", "CA1702:CompoundWordsShouldBeCasedCorrectly", MessageId = "NonNumeric", Justification = "Ok.")]
+        public static string RemoveNonNumeric(this string source)
+        {
+            return Regex.Replace(source, "[^0-9]*", String.Empty);
+        }
+
+        /// <summary>
+        /// Removes the string "remove" from source borders.
         /// </summary>
         /// <returns>The from borders.</returns>
-        /// <param name="source">Source.</param>
-        /// <param name="remove">Remove.</param>
+        /// <param name="source">The source string.</param>
+        /// <param name="remove">The string to remove.</param>
+        public static string RemoveFromBorders(this string source, string remove)
+        {
+            remove = Regex.Escape(remove);
+            return Regex.Replace(source, String.Format(CultureInfo.InvariantCulture, "(^{0}|{1}$)", remove, remove), String.Empty, RegexOptions.IgnoreCase);
+        }
+
+        /// <summary>
+        /// Removes the chars "remove" from source borders.
+        /// </summary>
+        /// <returns>The from borders.</returns>
+        /// <param name="source">The source string.</param>
+        /// <param name="remove">The chars to remove.</param>
         public static string RemoveFromBorders(this string source, params char[] remove)
         {
             string removeString = Regex.Escape(new String(remove));
-            return Regex.Replace(source, String.Format(CultureInfo.InvariantCulture, "(^[{0}]|[{1}]$)", removeString, removeString), "");
+            return Regex.Replace(source, String.Format(CultureInfo.InvariantCulture, "(^[{0}]|[{1}]$)", removeString, removeString), String.Empty);
         }
 
         /// <summary>
-        /// Removes the pontuactions.
+        /// Removes the punctuations.
         /// </summary>
-        /// <returns>The pontuactions.</returns>
-        /// <param name="source">Source.</param>
-        public static string RemovePontuactions(this string source)
+        /// <returns>The clean string.</returns>
+        /// <param name="source">The source string.</param>
+        public static string RemovePunctuations(this string source)
         {
-            return Regex.Replace(source, @"[!\(\)\[\]{}\:;\.,?'""]*", "");
+            return Regex.Replace(source, @"[!\(\)\[\]{}\:;\.,?'""]*", String.Empty);
         }
         #endregion
 
         #region EscapeAccentsToHex
-		/// <summary>
-		/// Escapes the accents to hexadecimal equivalent.
-		/// </summary>
-		/// <returns>The accents to hex.</returns>
-		/// <param name="source">Source.</param>
+        /// <summary>
+        /// Escapes the accents to hexadecimal equivalent.
+        /// </summary>
+        /// <returns>The accents to hex.</returns>
+        /// <param name="source">The source string.</param>
         public static string EscapeAccentsToHex(this string source)
         {
             StringBuilder builder = new StringBuilder(source.Length);
 
             int length = source.Length;
 
-            for(int i = 0; i < length; i++)
+            for (int i = 0; i < length; i++)
             {
                 char c = source[i];
 
-                if(c.HasAccent())
+                if (c.HasAccent())
                 {
-                    builder.Append(Uri.HexEscape(source[i]));                    
+                    builder.Append(Uri.HexEscape(source[i]));
                 }
                 else
-                {                   
+                {
                     builder.Append(source[i]);
                 }
             }
@@ -194,7 +195,7 @@ namespace HelperSharp
         /// Escapes the accents to html entities.
         /// </summary>
         /// <returns>The accents to html entities.</returns>
-        /// <param name="source">Source.</param>
+        /// <param name="source">The source string.</param>
         public static string EscapeAccentsToHtmlEntities(this string source)
         {
             int length = source.Length;
@@ -202,7 +203,7 @@ namespace HelperSharp
 
             for (int i = 0; i < length; i++)
             {
-                char ch = source[i];                 
+                char ch = source[i];
 
                 if ((ch >= '\x00a0') && (ch < 'Ā'))
                 {
@@ -220,13 +221,13 @@ namespace HelperSharp
 
         #region EndsWith
         /// <summary>
-        /// Verify if source ends the with pontuaction.
+        /// Verify if source ends the with punctuation.
         /// </summary>
-        /// <returns><c>true</c>, if with pontuaction was endsed, <c>false</c> otherwise.</returns>
-        /// <param name="source">Source.</param>
-        public static bool EndsWithPontuaction(this string source)
+        /// <returns><c>true</c>, if with punctuation was the end, <c>false</c> otherwise.</returns>
+        /// <param name="source">The source string.</param>
+        public static bool EndsWithPunctuation(this string source)
         {
-            return Regex.IsMatch(source, @"[!\(\)\[\]{}\:;\.,?'""]$");
+            return Regex.IsMatch(source, @"[!\(\)\[\]{}\:;\.,?'String.Empty]$");
         }
         #endregion
 
@@ -235,7 +236,7 @@ namespace HelperSharp
         /// Determines if has accent.
         /// </summary>
         /// <returns><c>true</c> if has accent the specified source; otherwise, <c>false</c>.</returns>
-        /// <param name="source">Source.</param>
+        /// <param name="source">The source string.</param>
         public static bool HasAccent(this string source)
         {
             int length = source.Length;
@@ -252,31 +253,32 @@ namespace HelperSharp
         }
         #endregion
 
-		#region InsertUnderscore
-		/// <summary>
-		/// Inserts the underscore before every upper case char.
-		/// </summary>
-		/// <returns>The result string.</returns>
-		/// <param name="input">Input.</param>
-		public static string InsertUnderscoreBeforeUpperCase(this string input)
-		{
-			if(String.IsNullOrEmpty(input))
-			{
-				return input;
-			}
+        #region InsertUnderscore
+        /// <summary>
+        /// Inserts the underscore before every upper case char.
+        /// </summary>
+        /// <returns>The result string.</returns>
+        /// <param name="input">The source string.</param>
+        public static string InsertUnderscoreBeforeUpperCase(this string input)
+        {
+            if (String.IsNullOrEmpty(input))
+            {
+                return input;
+            }
 
-			return s_insertUnderscoreBeforeUpperCase.Replace(input, "_$1");
-		}
-		#endregion
+            return s_insertUnderscoreBeforeUpperCase.Replace(input, "_$1");
+        }
+        #endregion
 
-		/// <summary>
-		/// Format the specified string.
-		/// </summary>
-		/// <param name="source">Source.</param>
-		/// <param name="args">Arguments.</param>
-		public static string With(this string source, params object[] args)
-		{
-			return String.Format (CultureInfo.InvariantCulture, source, args);
-		}
+        /// <summary>
+        /// Format the specified string.
+        /// </summary>
+        /// <param name="source">The source string.</param>
+        /// <param name="args">The arguments.</param>
+        /// <returns>The formatted string.</returns>
+        public static string With(this string source, params object[] args)
+        {
+            return String.Format(CultureInfo.InvariantCulture, source, args);
+        }
     }
 }
