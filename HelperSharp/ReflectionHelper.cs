@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 
@@ -80,17 +81,48 @@ namespace HelperSharp
         {
             ExceptionHelper.ThrowIfNull("type", type);
 
-            var types = AppDomain.CurrentDomain
-                .GetAssemblies()
-                .SelectMany(a => a.GetTypes())
-                .Where(t => type.IsAssignableFrom(t) && t != type);
+            var canditateAssemblies = AppDomain.CurrentDomain.GetAssemblies();
+            var types = new List<Type>();
 
-            if (onlyConcrete)
+            // Loads each assembly types and ignores ReflectionTypeLoadExceptions.
+            foreach (var a in canditateAssemblies)
             {
-                types = types.Where(t => !t.IsInterface && !t.IsAbstract);
+                try
+                {
+                    types.AddRange(a.GetTypes());
+                }
+                catch (ReflectionTypeLoadException ex)
+                {
+                    Debug.WriteLine(ex.Message);
+                    continue;
+                }
             }
+            
+            // Checks every type looking for subclasses of type.
+            // When chekhing a particular type, a exception can be throw. 
+            // It use to happen when some assembly can load all referenced assemblies.
+            var externalInterfaceTypes = types.Where(t => {
+                bool result;
 
-            return types.OrderBy(t => t.Name).ToList();
+                try
+                {
+                    result = type.IsAssignableFrom(t) && !t.Equals(type);
+
+                    if (result && onlyConcrete)
+                    {
+                        result = !t.IsInterface && !t.IsAbstract;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(ex.Message);
+                    return false;
+                }
+
+                return result;
+            });
+
+            return externalInterfaceTypes.OrderBy(t => t.Name).ToList();
         }
 
         /// <summary>

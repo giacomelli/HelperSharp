@@ -1,10 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="HelperSharp\ReflectionHelper.cs">
+    <Files>
+      <File FileName="HelperSharp\ReflectionHelper.cs" Line="111" Column="48" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="HelperSharp" expanded="True" />
+          <Node name="HelperSharp" expanded="True">
+            <Node name="ReflectionHelper.cs" selected="True" />
+          </Node>
+          <Node name="HelperSharp.UnitTests" expanded="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">
@@ -14,12 +20,17 @@
         <State />
       </Pad>
       <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State expanded="True" selected="True" />
+        <State expanded="True">
+          <Node name="HelperSharp.UnitTests" selected="True" />
+        </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\giacomelli\Documents\HelperSharp\HelperSharp\ReflectionHelper.cs" line="96" column="1" />
+      <Breakpoint file="C:\Users\giacomelli\Documents\HelperSharp\HelperSharp\ReflectionHelper.cs" line="118" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
