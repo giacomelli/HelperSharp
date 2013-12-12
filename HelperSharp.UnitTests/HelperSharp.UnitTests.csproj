@@ -81,6 +81,7 @@
     <Compile Include="Mvc\Stubs\StubPage1.cs" />
     <Compile Include="Mvc\WebViewPageExtensionsTest.cs" />
     <Compile Include="NameValueCollectionExtensionsTest.cs" />
+    <Compile Include="ObjectHelperTest.cs" />
     <Compile Include="ReflectionHelperTest.cs" />
     <Compile Include="StringExtensionsTest.cs" />
     <Compile Include="EnumerableHelperTest.cs" />
