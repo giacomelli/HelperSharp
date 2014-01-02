@@ -13,6 +13,7 @@ namespace HelperSharp
     {
         #region Fields
         private static Regex s_insertUnderscoreBeforeUpperCase = new Regex(@"(?<!_|^)([A-Z])", RegexOptions.Compiled);
+        private static Regex s_capitalizeRegex = new Regex(@"((\s|^)\S)(\S+)", RegexOptions.Compiled);
         #endregion
 
         #region GetWordFromIndex
@@ -279,6 +280,27 @@ namespace HelperSharp
         public static string With(this string source, params object[] args)
         {
             return String.Format(CultureInfo.InvariantCulture, source, args);
+        }
+
+        /// <summary>
+        /// Capitalize the string.
+        /// </summary>
+        /// <param name="source">The source string.</param>
+        /// <param name="ignoreWordsLowerThanChars">The words lower than specified chars will be ignored.</param>
+        /// <returns>The capitalized string.</returns>
+        public static string Capitalize(this string source, int ignoreWordsLowerThanChars = 3)
+        {
+            return s_capitalizeRegex.Replace(source.ToLowerInvariant(), (m) => 
+            {
+                if(m.Value.Trim().Length < ignoreWordsLowerThanChars)
+                {
+                    return m.Value;
+                }
+                else
+                {
+                    return m.Groups[1].Value.ToUpperInvariant() + m.Groups[3].Value;
+                }
+            });
         }
     }
 }

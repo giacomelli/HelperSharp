@@ -152,5 +152,25 @@ namespace HelperSharp.UnitTests
 		{
 			Assert.AreEqual ("A1b2", "A{0}b{1}".With (1, 2));
 		}
+
+        [Test]
+        public void Capitalize_AllUpperCase_Capitalized()
+        {
+            Assert.AreEqual("Teste da Souza Silva", "TESTE DA SOUZA SILVA".Capitalize());
+            Assert.AreEqual("Teste Da Souza Silva", "TESTE DA SOUZA SILVA".Capitalize(2));
+            Assert.AreEqual("teste da souza silva", "TESTE DA SOUZA SILVA".Capitalize(6));
+        }
+
+        [Test]
+        public void Capitalize_AllLowerCase_Capitalized()
+        {
+            Assert.AreEqual("Teste da Souza Silva", "teste da souza silva".Capitalize());
+        }
+
+        [Test]
+        public void Capitalize_DiffCases_Capitalized()
+        {
+            Assert.AreEqual("Teste da Souza Silva", "TesTe DA sOUZA sILva".Capitalize());
+        }
     }
 }
