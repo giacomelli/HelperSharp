@@ -30,6 +30,26 @@ namespace HelperSharp
         {
             return new DateTime(value.Year, value.Month, DateTime.DaysInMonth(value.Year, value.Month), 23, 59, 59, 999);
         }
+
+        /// <summary>
+        /// Gets the begin of day.
+        /// </summary>
+        /// <returns>The begin of day.</returns>
+        /// <param name="value">The DateTime it self.</param>
+        public static DateTime GetBeginOfDay(this DateTime value)
+        {
+            return value.Date;
+        }
+
+        /// <summary>
+        /// Gets the end of day.
+        /// </summary>
+        /// <returns>The end of day.</returns>
+        /// <param name="value">The DateTime it self.</param>
+        public static DateTime GetEndOfDay(this DateTime value)
+        {
+            return value.Date.AddDays(1).AddTicks(-1);
+        }
         #endregion
     }
 }

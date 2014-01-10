@@ -31,5 +31,17 @@ namespace HelperSharp.UnitTests
             expected = new DateTime(2011, 07, 31, 23, 59, 59, 999);
             Assert.AreEqual(expected, new DateTime(2011, 07, 28, 15, 21, 1, 2).GetEndOfMonth());
         }
+
+        [Test()]
+        public void GetBeginOfDayTest()
+        {
+            Assert.AreEqual(new DateTime(1981, 3, 27, 0, 0, 0, 0), new DateTime(1981, 3, 27, 3, 3, 3, 999).GetBeginOfDay());
+        }
+
+        [Test()]
+        public void GetEndOfDayTest()
+        {
+            Assert.AreEqual(new DateTime(1981, 3, 28, 0, 0, 0, 0).AddTicks(-1), new DateTime(1981, 3, 27, 3, 3, 3, 999).GetEndOfDay());
+        }
     }
 }
