@@ -20,9 +20,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <GenerateDocumentation>true</GenerateDocumentation>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <DocumentationFile>bin\Debug\HelperSharp.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\HelperSharp.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -54,6 +53,7 @@
     <Compile Include="StringExtensions.cs" />
     <Compile Include="EnumerableHelper.cs" />
     <Compile Include="ExceptionHelper.cs" />
+    <Compile Include="GravatarHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
