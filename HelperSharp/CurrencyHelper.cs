@@ -41,7 +41,7 @@ namespace HelperSharp
 
         #region Methods
         /// <summary>
-        /// Determines if is valid ISO currency symbol
+        /// Determines if is valid ISO currency symbol.
         /// </summary>
         /// <returns><c>true</c> if is valid ISO currency symbol; otherwise, <c>false</c>.</returns>
         /// <param name="symbol">The symbol to validate.</param>

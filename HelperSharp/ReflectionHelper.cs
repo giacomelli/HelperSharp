@@ -12,7 +12,7 @@ namespace HelperSharp
     public static class ReflectionHelper
     {
         /// <summary>
-        /// Gest the property with the specified name.
+        /// Gets the property with the specified name.
         /// </summary>
         /// <param name="type">The type.</param>
         /// <param name="propertyName">The property name.</param>

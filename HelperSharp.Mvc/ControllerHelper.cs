@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Web.Mvc;
 
 namespace HelperSharp.Mvc
@@ -21,7 +20,7 @@ namespace HelperSharp.Mvc
         }
 
         /// <summary>
-        /// Get all actions descriptors of the controller.
+        /// Gets all actions descriptors of the controller.
         /// </summary>
         /// <param name="controllerType">The controller type.</param>
         /// <returns>The actions descriptors.</returns>
@@ -53,7 +52,7 @@ namespace HelperSharp.Mvc
             return new ReflectedControllerDescriptor(controllerType)
                 .GetCanonicalActions()
                 .Where(a => a.IsDefined(customAttributeType, true))
-                .ToList();            
+                .ToList();
         }
 
         /// <summary>

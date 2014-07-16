@@ -67,6 +67,7 @@
     <Compile Include="ConvertibleExtensionsTest.cs" />
     <Compile Include="DateTimeExtensionsTest.cs" />
     <Compile Include="EnumerableExtensionsTest.cs" />
+    <Compile Include="ExpressionHelperTest.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Mvc\ControllerHelperTest.cs" />
     <Compile Include="Mvc\Stubs\StubAbstractController.cs" />

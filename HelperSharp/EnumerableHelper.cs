@@ -32,7 +32,7 @@ namespace HelperSharp
         }
 
         /// <summary>
-        /// Calculates the hash code.
+        /// Calculates the hash code using all items.
         /// </summary>
         /// <returns>The hash code.</returns>
         /// <param name="items">The items.</param>

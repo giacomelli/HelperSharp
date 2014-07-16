@@ -9,7 +9,7 @@ namespace HelperSharp
     {
         #region Métodos
        /// <summary>
-       /// Removes the duplicates.
+       /// Removes the duplicates items from array.
        /// </summary>
        /// <returns>The duplicates.</returns>
        /// <param name="items">The items.</param>

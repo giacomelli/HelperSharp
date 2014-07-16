@@ -18,7 +18,7 @@ namespace HelperSharp
 
         #region GetWordFromIndex
         /// <summary>
-        /// Gets the index of the word from the source.
+        /// Gets the word in the specified index.
         /// </summary>
         /// <returns>The word from index.</returns>
         /// <param name="source">The source string.</param>
@@ -30,7 +30,7 @@ namespace HelperSharp
         }
 
         /// <summary>
-        /// Gets the index of the word from source.
+        /// Gets the word in the specified index.
         /// </summary>
         /// <returns>The word from index.</returns>
         /// <param name="source">The source string.</param>
@@ -127,7 +127,7 @@ namespace HelperSharp
         }
 
         /// <summary>
-        /// Removes the string "remove" from source borders.
+        /// Removes the speficied string from borders.
         /// </summary>
         /// <returns>The from borders.</returns>
         /// <param name="source">The source string.</param>
@@ -272,7 +272,7 @@ namespace HelperSharp
         #endregion
 
         /// <summary>
-        /// Format the specified string.
+        /// Format the specified string. Is a String.Format(CultureInfo.InvariantCulture,..) shortcut.
         /// </summary>
         /// <param name="source">The source string.</param>
         /// <param name="args">The arguments.</param>
@@ -290,9 +290,9 @@ namespace HelperSharp
         /// <returns>The capitalized string.</returns>
         public static string Capitalize(this string source, int ignoreWordsLowerThanChars = 3)
         {
-            return s_capitalizeRegex.Replace(source.ToLowerInvariant(), (m) => 
+            return s_capitalizeRegex.Replace(source.ToLowerInvariant(), (m) =>
             {
-                if(m.Value.Trim().Length < ignoreWordsLowerThanChars)
+                if (m.Value.Trim().Length < ignoreWordsLowerThanChars)
                 {
                     return m.Value;
                 }
@@ -301,6 +301,20 @@ namespace HelperSharp
                     return m.Groups[1].Value.ToUpperInvariant() + m.Groups[3].Value;
                 }
             });
+        }
+
+        /// <summary>
+        ///  Returns a value indicating whether the specified substring occurs within this string 
+        ///  <remarks>
+        ///  Based on http://stackoverflow.com/a/444818/956886. 
+        /// </remarks>
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="substring">The substring.</param>
+        /// <returns>True se if substring occurs, otherwise false.</returns>
+        public static bool ContainsIgnoreCase(this string source, string substring)
+        {
+            return source.IndexOf(substring, StringComparison.OrdinalIgnoreCase) >= 0;
         }
     }
 }
