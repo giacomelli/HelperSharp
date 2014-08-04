@@ -78,14 +78,26 @@ MVC
 ------
 Helpers
 ------
+Helpers
+------
 * **ControllerHelper**
 	* GetControllerTypes: gets all concrete controller types.
 	* GetActionsDescriptors: gets all actions descriptors of the controller.
 
-Change Log
-======
+Extensions
+------
+* **ByteExtensions**
+	* SendOverHttp: send the byte array content over HTTP current response.
+
+#Change Log
+
+###HelperSharp
 * 0.0.3.7	
 	* Added:
 		* StringExtensions.ContainsIgnoreCase
 		* ExpressionHelper.GetMemberExpression
 * 0.0.0.1 Initial version.
+
+###HelperSharp.Mvc
+* 0.0.1 Initial version.
+* 0.0.2 Added ByteExtensions.
