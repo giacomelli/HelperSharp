@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections;
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 
 namespace HelperSharp
 {
@@ -17,6 +19,7 @@ namespace HelperSharp
         /// <typeparam name="T">The type.</typeparam>
         /// <param name="argument">The argument value.</param>
         /// <returns>True if is null or default.</returns>
+        [SuppressMessage("Microsoft.Performance", "CA1820:TestForEmptyStringsUsingStringLength")]
         public static bool IsNullOrDefault<T>(T argument)
         {
             // Deal with normal scenarios.
@@ -59,6 +62,33 @@ namespace HelperSharp
             }
 
             return false;
+        }
+
+        /// <summary>
+        /// Creates a shallow copy of the specified source.
+        /// </summary>
+        /// <remarks>
+        /// It can be useful to remove out the proxy in ORM like EF.
+        /// </remarks>
+        /// <param name="source">The source object to be copied.</param>
+        /// <returns>The shallow copy.</returns>
+        public static object CreateShallowCopy(object source)
+        {
+            ExceptionHelper.ThrowIfNull("source", source);
+
+            var sourceType = source.GetType();
+            var destiny = Activator.CreateInstance(sourceType);
+
+            var sourceProperties = source.GetType()
+                                    .GetProperties()
+                                    .Where(p => p.CanRead && p.CanWrite);
+
+            foreach (var property in sourceProperties)
+            {
+                property.SetValue(destiny, property.GetValue(source, null), null);
+            }
+
+            return destiny;
         }
     }
 }

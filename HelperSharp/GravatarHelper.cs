@@ -1,41 +1,29 @@
-using System;
-using System.Security.Cryptography;
-using System.Text;
+using System.Diagnostics.CodeAnalysis;
 
 namespace HelperSharp
 {
-	/// <summary>
-	/// Gravatar helper.
-	/// </summary>
-    public class GravatarHelper
+    /// <summary>
+    /// Gravatar helper.
+    /// </summary>
+    [SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Gravatar")]
+    public static class GravatarHelper
     {
-		/// <summary>
-		/// Gets the avatar URL for the specified e-mail.
-		/// Original source code from: https://gist.github.com/danesparza/973923.
-		/// </summary>
-		/// <returns>The avatar URL.</returns>
-		/// <param name="email">The e-mail.</param>
-		public static string GetAvatarUrl(string email)
-		{
-			ExceptionHelper.ThrowIfNullOrEmpty ("email", email);
+        /// <summary>
+        /// Gets the avatar URL for the specified e-mail.
+        /// Original source code from: https://gist.github.com/danesparza/973923.
+        /// </summary>
+        /// <returns>The avatar URL.</returns>
+        /// <param name="email">The e-mail.</param>
+        [SuppressMessage("Microsoft.Globalization", "CA1308:NormalizeStringsToUppercase")]
+        [SuppressMessage("Microsoft.Design", "CA1055:UriReturnValuesShouldNotBeStrings")]
+        public static string GetAvatarUrl(string email)
+        {
+            ExceptionHelper.ThrowIfNullOrEmpty("email", email);
 
-			var sanitizedEmail = email.Trim ().ToLowerInvariant ();
-			var md5Hasher = MD5.Create ();
+            var sanitizedEmail = email.Trim().ToLowerInvariant();
+            var avatarHash = MD5Helper.Encrypt(sanitizedEmail);
 
-			// Convert the input string to a byte array and compute the hash.  
-			byte[] data = md5Hasher.ComputeHash (Encoding.Default.GetBytes (sanitizedEmail));
-
-			var builder = new StringBuilder ();
-
-			// Loop through each byte of the hashed data  
-			// and format each one as a hexadecimal string.  
-			for (int i = 0; i < data.Length; i++) {
-				builder.Append (data [i].ToString ("x2"));
-			}
-
-			var avatarHash = builder.ToString ();
-	
-			return "http://www.gravatar.com/avatar/{0}.jpg".With(avatarHash); 
-		}
+            return "http://www.gravatar.com/avatar/{0}.jpg".With(avatarHash);
+        }
     }
 }

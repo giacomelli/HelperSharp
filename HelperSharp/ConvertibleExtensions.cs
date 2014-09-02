@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
 
 namespace HelperSharp
 {
@@ -16,14 +16,16 @@ namespace HelperSharp
         /// <param name="self">The convertible it self.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
         /// <returns>The converted.</returns>
+        [SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes")]
         public static T To<T>(this IConvertible self)
         {
             try
             {
-                return (T)Convert.ChangeType(self, typeof(T));
+                return (T)Convert.ChangeType(self, typeof(T), CultureInfo.CurrentCulture);
             }
-            catch
+            catch (Exception ex)
             {
+                Debug.WriteLine(ex.Message);
                 return default(T);
             }
         }

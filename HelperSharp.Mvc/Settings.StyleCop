@@ -1,12 +1,4 @@
 <StyleCopSettings Version="105">
-  <GlobalSettings>
-    <CollectionProperty Name="RecognizedWords">
-      <Value>danesparza</Value>
-      <Value>github</Value>
-      <Value>gravatar</Value>
-      <Value>stackoverflow</Value>
-    </CollectionProperty>
-  </GlobalSettings>
   <Analyzers>
     <Analyzer AnalyzerId="StyleCop.CSharp.ReadabilityRules">
       <Rules>

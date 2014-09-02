@@ -132,15 +132,15 @@ namespace HelperSharp.UnitTests
         [Test()]
         public void InsertUnderscoreBeforeUpperCase_NullOrEmpty_ReturnsInput()
         {
-            Assert.AreEqual(null, StringExtensions.InsertUnderscoreBeforeUpperCase(null));
-            Assert.AreEqual("", StringExtensions.InsertUnderscoreBeforeUpperCase(""));
+            Assert.AreEqual(null, StringExtensions.InsertUnderscoreBeforeUppercase(null));
+            Assert.AreEqual("", StringExtensions.InsertUnderscoreBeforeUppercase(""));
         }
 
         [Test()]
         public void InsertUnderscoreBeforeUpperCase_String_StringWithUpperCases()
         {
-            Assert.AreEqual("One_Two_Three", StringExtensions.InsertUnderscoreBeforeUpperCase("OneTwoThree"));
-            Assert.AreEqual("One_Two_Three", StringExtensions.InsertUnderscoreBeforeUpperCase("One_Two_Three"));
+            Assert.AreEqual("One_Two_Three", StringExtensions.InsertUnderscoreBeforeUppercase("OneTwoThree"));
+            Assert.AreEqual("One_Two_Three", StringExtensions.InsertUnderscoreBeforeUppercase("One_Two_Three"));
         }
 
         [Test()]

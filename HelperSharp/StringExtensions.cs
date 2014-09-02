@@ -12,7 +12,7 @@ namespace HelperSharp
     public static class StringExtensions
     {
         #region Fields
-        private static Regex s_insertUnderscoreBeforeUpperCase = new Regex(@"(?<!_|^)([A-Z])", RegexOptions.Compiled);
+        private static Regex s_insertUnderscoreBeforeUppercase = new Regex(@"(?<!_|^)([A-Z])", RegexOptions.Compiled);
         private static Regex s_capitalizeRegex = new Regex(@"((\s|^)\S)(\S+)", RegexOptions.Compiled);
         #endregion
 
@@ -127,7 +127,7 @@ namespace HelperSharp
         }
 
         /// <summary>
-        /// Removes the speficied string from borders.
+        /// Removes the specified string from borders.
         /// </summary>
         /// <returns>The from borders.</returns>
         /// <param name="source">The source string.</param>
@@ -260,14 +260,14 @@ namespace HelperSharp
         /// </summary>
         /// <returns>The result string.</returns>
         /// <param name="input">The source string.</param>
-        public static string InsertUnderscoreBeforeUpperCase(this string input)
+        public static string InsertUnderscoreBeforeUppercase(this string input)
         {
             if (String.IsNullOrEmpty(input))
             {
                 return input;
             }
 
-            return s_insertUnderscoreBeforeUpperCase.Replace(input, "_$1");
+            return s_insertUnderscoreBeforeUppercase.Replace(input, "_$1");
         }
         #endregion
 
@@ -288,19 +288,22 @@ namespace HelperSharp
         /// <param name="source">The source string.</param>
         /// <param name="ignoreWordsLowerThanChars">The words lower than specified chars will be ignored.</param>
         /// <returns>The capitalized string.</returns>
+        [SuppressMessage("Microsoft.Globalization", "CA1308:NormalizeStringsToUppercase")]
         public static string Capitalize(this string source, int ignoreWordsLowerThanChars = 3)
         {
-            return s_capitalizeRegex.Replace(source.ToLowerInvariant(), (m) =>
-            {
-                if (m.Value.Trim().Length < ignoreWordsLowerThanChars)
+            return s_capitalizeRegex.Replace(
+                source.ToLowerInvariant(),
+                (m) =>
                 {
-                    return m.Value;
-                }
-                else
-                {
-                    return m.Groups[1].Value.ToUpperInvariant() + m.Groups[3].Value;
-                }
-            });
+                    if (m.Value.Trim().Length < ignoreWordsLowerThanChars)
+                    {
+                        return m.Value;
+                    }
+                    else
+                    {
+                        return m.Groups[1].Value.ToUpperInvariant() + m.Groups[3].Value;
+                    }
+                });
         }
 
         /// <summary>

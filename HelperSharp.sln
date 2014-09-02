@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{9B6C10
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperSharp.Mvc", "HelperSharp.Mvc\HelperSharp.Mvc.csproj", "{1D52592A-E34B-4449-80EF-27A293A20C3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperSharp.WebApi", "HelperSharp.WebApi\HelperSharp.WebApi.csproj", "{249D705A-2BC7-4369-9762-D9F658217C4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{1D52592A-E34B-4449-80EF-27A293A20C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D52592A-E34B-4449-80EF-27A293A20C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D52592A-E34B-4449-80EF-27A293A20C3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{249D705A-2BC7-4369-9762-D9F658217C4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{249D705A-2BC7-4369-9762-D9F658217C4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{249D705A-2BC7-4369-9762-D9F658217C4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{249D705A-2BC7-4369-9762-D9F658217C4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

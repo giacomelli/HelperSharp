@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
 
@@ -18,6 +20,8 @@ namespace HelperSharp
         /// <summary>
         /// Initializes static members of the <see cref="HelperSharp.CurrencyHelper"/> class.
         /// </summary>
+        [SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes")]
+        [SuppressMessage("Microsoft.Performance", "CA1810:InitializeReferenceTypeStaticFieldsInline")]
         static CurrencyHelper()
         {
             s_isoCurrencySymbols = CultureInfo
@@ -29,8 +33,10 @@ namespace HelperSharp
                         {
                             return new RegionInfo(culture.LCID);
                         }
-                        catch
+                        catch (Exception ex)
                         {
+                            Debug.WriteLine(ex.Message);
+
                             return null;
                         }
                     })
@@ -45,9 +51,9 @@ namespace HelperSharp
         /// </summary>
         /// <returns><c>true</c> if is valid ISO currency symbol; otherwise, <c>false</c>.</returns>
         /// <param name="symbol">The symbol to validate.</param>
-        public static bool IsValidISOCurrencySymbol(string symbol)
+        public static bool IsValidIsoCurrencySymbol(string symbol)
         {
-            return s_isoCurrencySymbols.Count(i => i.Equals(symbol, StringComparison.InvariantCulture)) > 0;
+            return s_isoCurrencySymbols.Count(i => i.Equals(symbol, StringComparison.Ordinal)) > 0;
         }
         #endregion
     }

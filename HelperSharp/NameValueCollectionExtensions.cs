@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 
 namespace HelperSharp
 {
@@ -20,7 +17,7 @@ namespace HelperSharp
         /// <returns>The boolean value.</returns>
         public static bool GetBoolean(this NameValueCollection collection, string name)
         {
-            return Convert.ToBoolean(collection[name]);
+            return Convert.ToBoolean(collection[name], CultureInfo.InvariantCulture);
         }
 
         /// <summary>
@@ -31,7 +28,7 @@ namespace HelperSharp
         /// <returns>The integer value.</returns>
         public static int GetInt32(this NameValueCollection collection, string name)
         {
-            return Convert.ToInt32(collection[name]);
+            return Convert.ToInt32(collection[name], CultureInfo.InvariantCulture);
         }
 
         /// <summary>

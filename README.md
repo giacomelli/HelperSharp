@@ -10,13 +10,15 @@ Setup
 NuGet
 ------
 PM> Install-Package HelperSharp
+PM> Install-Package HelperSharp.Mvc
+PM> Install-Package HelperSharp.WebApi
 
 Features
 =========
 Helpers
 ------
 * **CurrencyHelper**
-	* IsValidISOCurrencySymbol: determines if is valid ISO currency symbol.
+	* IsValidIsoCurrencySymbol: determines if is valid ISO currency symbol.
 * **EnumerableHelper**
 	* AreEqual&lt;T&gt;: verify if collections are equal comparing each item. Order is considered.
 	* CalculateHashCode: calculates the hash code using all items.
@@ -27,8 +29,12 @@ Helpers
 	* GetMemberExpression: gets a member expression from the expression.
 * **GravatarHelper**
 	* GetAvatarUrl: gets the avatar URL for the specified e-mail.
+* **MD5Helper**
+	* Encrypt: encrypt the specified string using MD5 algorithm.	
+	* IsEncrypted: check if the specified string is encrypted using MD5.
 * **ObjectHelper**
 	* IsNullOrDefault&lt;T&gt;: check if argument is null or default value of T type.
+	* CreateShallowCopy: creates a shallow copy of the specified source.
 * **ReflectionHelper**
 	* GetProperty: gets the property with the specified name.
 	* GetPropertyValue: gets the property's value.
@@ -76,8 +82,7 @@ Extensions
 
 MVC
 ------
-Helpers
-------
+
 Helpers
 ------
 * **ControllerHelper**
@@ -89,9 +94,22 @@ Extensions
 * **ByteExtensions**
 	* SendOverHttp: send the byte array content over HTTP current response.
 
+WebApi
+------
+
+Extensions
+------
+* **HttpRequestMessageExtensions**
+	* IsLocal: check if is a local request.
+	
 #Change Log
 
 ###HelperSharp
+* 0.0.4.0:
+	* Created Helper.WebApi package.
+	* Added:
+		* MD5Helper
+		* ObjectHelper.CreateShallowCopy.
 * 0.0.3.7	
 	* Added:
 		* StringExtensions.ContainsIgnoreCase

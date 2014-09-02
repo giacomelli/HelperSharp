@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection;
 
@@ -77,6 +78,7 @@ namespace HelperSharp
         /// <param name="type">The base type.</param>
         /// <param name="onlyConcrete">If should return only concrete subclasses or if should return abstract and interfaces too. Default is true.</param>
         /// <returns>The subclasses.</returns>
+        [SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes")]
         public static IList<Type> GetSubclassesOf(Type type, bool onlyConcrete = true)
         {
             ExceptionHelper.ThrowIfNull("type", type);
@@ -97,30 +99,32 @@ namespace HelperSharp
                     continue;
                 }
             }
-            
+
             // Checks every type looking for subclasses of type.
             // When chekhing a particular type, a exception can be throw. 
             // It use to happen when some assembly can load all referenced assemblies.
-            var externalInterfaceTypes = types.Where(t => {
-                bool result;
-
-                try
+            var externalInterfaceTypes = types.Where(
+                t =>
                 {
-                    result = type.IsAssignableFrom(t) && !t.Equals(type);
+                    bool result;
 
-                    if (result && onlyConcrete)
+                    try
                     {
-                        result = !t.IsInterface && !t.IsAbstract;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Debug.WriteLine(ex.Message);
-                    return false;
-                }
+                        result = type.IsAssignableFrom(t) && !t.Equals(type);
 
-                return result;
-            });
+                        if (result && onlyConcrete)
+                        {
+                            result = !t.IsInterface && !t.IsAbstract;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.WriteLine(ex.Message);
+                        return false;
+                    }
+
+                    return result;
+                });
 
             return externalInterfaceTypes.OrderBy(t => t.Name).ToList();
         }
@@ -131,6 +135,7 @@ namespace HelperSharp
         /// <typeparam name="TType">The base type.</typeparam>
         /// <param name="onlyConcrete">If should return only concrete subclasses or if should return abstract and interfaces too. Default is true.</param>
         /// <returns>The subclasses.</returns>
+        [SuppressMessage("Microsoft.Design", "CA1004:GenericMethodsShouldProvideTypeParameter")]
         public static IList<Type> GetSubclassesOf<TType>(bool onlyConcrete = true)
         {
             return GetSubclassesOf(typeof(TType), onlyConcrete);

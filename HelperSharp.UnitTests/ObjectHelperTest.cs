@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using HelperSharp.UnitTests.Stubs;
 using NUnit.Framework;
 
 namespace HelperSharp.UnitTests
@@ -81,6 +82,28 @@ namespace HelperSharp.UnitTests
         public void IsNullOrDefault_EnumIsNotDefaultValue_True()
         {
             Assert.IsFalse(ObjectHelper.IsNullOrDefault(DayOfWeek.Monday));
+        }
+
+        [Test]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void CreateShallowCopy_Null_Exception()
+        {
+            ObjectHelper.CreateShallowCopy(null);
+        }
+
+        [Test]
+        public void CreateShallowCopy_Source_OnlyWritablePropertiesCopied()
+        {
+            var source = new Stub1() {
+                Property1 = 11,
+                Property3 = 33
+            };
+
+            var actual = ObjectHelper.CreateShallowCopy(source) as Stub1;
+            Assert.IsNotNull(actual);
+            Assert.IsFalse(Object.ReferenceEquals(source, actual));
+            Assert.AreEqual(11, actual.Property1);
+            Assert.AreEqual(33, actual.Property3);
         }
     }
 }
