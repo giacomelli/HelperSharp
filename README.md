@@ -9,9 +9,9 @@ Setup
 
 NuGet
 ------
-PM> Install-Package HelperSharp
-PM> Install-Package HelperSharp.Mvc
-PM> Install-Package HelperSharp.WebApi
+    PM> Install-Package HelperSharp
+    PM> Install-Package HelperSharp.Mvc
+    PM> Install-Package HelperSharp.WebApi
 
 Features
 =========
