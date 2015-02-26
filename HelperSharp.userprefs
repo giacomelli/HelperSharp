@@ -4,13 +4,12 @@
     <Files>
       <File FileName="HelperSharp.UnitTests/Mvc/ControllerHelperTest.cs" Line="15" Column="15" />
       <File FileName="HelperSharp/ObjectHelper.cs" Line="37" Column="37" />
-      <File FileName="HelperSharp/StringExtensions.cs" Line="43" Column="43" />
+      <File FileName="HelperSharp/StringExtensions.cs" Line="50" Column="50" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="HelperSharp" expanded="True" />
-          <Node name="HelperSharp.Pcl" expanded="True" selected="True" />
+          <Node name="HelperSharp.WebApi" selected="True" />
         </State>
       </Pad>
       <Pad Id="MonoDevelop.NUnit.TestPad">
