@@ -3,8 +3,6 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.0</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{25E1AB57-401D-43EF-8E89-36CD59EBB9BB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>HelperSharp</RootNamespace>
@@ -38,24 +36,24 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExpressionHelper.cs" />
     <Compile Include="MD5Helper.cs" />
     <Compile Include="NameValueCollectionExtensions.cs" />
-    <Compile Include="ObjectHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
     </Compile>
     <Compile Include="CurrencyHelper.cs" />
-    <Compile Include="ArrayExtensions.cs" />
     <Compile Include="CharExtensions.cs" />
     <Compile Include="ConvertibleExtensions.cs" />
+    <Compile Include="ReflectionHelper.cs" />
+    <Compile Include="GravatarHelper.cs" />
+    <Compile Include="ArrayExtensions.cs" />
     <Compile Include="DateTimeExtensions.cs" />
     <Compile Include="EnumerableExtensions.cs" />
-    <Compile Include="ReflectionHelper.cs" />
-    <Compile Include="StringExtensions.cs" />
     <Compile Include="EnumerableHelper.cs" />
     <Compile Include="ExceptionHelper.cs" />
-    <Compile Include="GravatarHelper.cs" />
+    <Compile Include="ExpressionHelper.cs" />
+    <Compile Include="ObjectHelper.cs" />
+    <Compile Include="StringExtensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,21 +1,20 @@
-﻿<Properties>
+﻿<Properties StartupItem="HelperSharp/HelperSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="HelperSharp/GravatarHelper.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HelperSharp/StringExtensions.cs">
     <Files>
-      <File FileName="HelperSharp/GravatarHelper.cs" Line="11" Column="6" />
-      <File FileName="HelperSharp.UnitTests/GravatarHelperTest.cs" Line="25" Column="68" />
+      <File FileName="HelperSharp.UnitTests/Mvc/ControllerHelperTest.cs" Line="15" Column="15" />
+      <File FileName="HelperSharp/ObjectHelper.cs" Line="37" Column="37" />
+      <File FileName="HelperSharp/StringExtensions.cs" Line="43" Column="43" />
     </Files>
     <Pads>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
+      <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="HelperSharp.UnitTests" expanded="True">
-            <Node name="HelperSharp" expanded="True">
-              <Node name="UnitTests" expanded="True">
-                <Node name="GravatarHelperTest" expanded="True" selected="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="HelperSharp" expanded="True" />
+          <Node name="HelperSharp.Pcl" expanded="True" selected="True" />
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True" selected="True" />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
