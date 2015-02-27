@@ -31,11 +31,13 @@ namespace HelperSharp.UnitTests
             Assert.IsTrue("HelperSharp,".EndsWithPunctuation());
         }
 
+		#if !PCL
         [Test()]
         public void EscapeAccentsToHexTest()
         {
             Assert.AreEqual("Sistema de Informa%E7%F5es", "Sistema de Informações".EscapeAccentsToHex());
         }
+		#endif
 
         [Test()]
         public void EscapeAccentsToHtmlEntitiesTest()
@@ -80,6 +82,7 @@ namespace HelperSharp.UnitTests
             Assert.AreEqual("Collection", source.GetWordFromIndex(44));
         }
 
+		#if !PCL
         [Test()]
         public void HasAccentTest()
         {
@@ -100,6 +103,7 @@ namespace HelperSharp.UnitTests
             Assert.AreEqual("Ideia ou ideia?", "Idéia ou ideia?".RemoveAccents());
             Assert.AreEqual("Para ou para?", "Pára ou para?".RemoveAccents());
         }
+		#endif
 
         [Test()]
         public void RemoveFromBordersTest()

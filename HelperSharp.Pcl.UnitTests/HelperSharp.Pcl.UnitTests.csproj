@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10E69E96-C1CE-49B8-BC54-2FF4324B5C80}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>HelperSharp.Pcl.UnitTests</RootNamespace>
+    <AssemblyName>HelperSharp.Pcl.UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;PCL</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <DefineConstants>PCL</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\HelperSharp.UnitTests\ArrayExtensionsTest.cs">
+      <Link>ArrayExtensionsTest.cs</Link>
+    </Compile>
+    <Compile Include="..\HelperSharp.UnitTests\DateTimeExtensionsTest.cs">
+      <Link>DateTimeExtensionsTest.cs</Link>
+    </Compile>
+    <Compile Include="..\HelperSharp.UnitTests\EnumerableExtensionsTest.cs">
+      <Link>EnumerableExtensionsTest.cs</Link>
+    </Compile>
+    <Compile Include="..\HelperSharp.UnitTests\EnumerableHelperTest.cs">
+      <Link>EnumerableHelperTest.cs</Link>
+    </Compile>
+    <Compile Include="..\HelperSharp.UnitTests\ExceptionHelperTest.cs">
+      <Link>ExceptionHelperTest.cs</Link>
+    </Compile>
+    <Compile Include="..\HelperSharp.UnitTests\ExpressionHelperTest.cs">
+      <Link>ExpressionHelperTest.cs</Link>
+    </Compile>
+    <Compile Include="..\HelperSharp.UnitTests\ObjectHelperTest.cs">
+      <Link>ObjectHelperTest.cs</Link>
+    </Compile>
+    <Compile Include="..\HelperSharp.UnitTests\StringExtensionsTest.cs">
+      <Link>StringExtensionsTest.cs</Link>
+    </Compile>
+    <Compile Include="..\HelperSharp.UnitTests\Stubs\IStub.cs">
+      <Link>Stubs\IStub.cs</Link>
+    </Compile>
+    <Compile Include="..\HelperSharp.UnitTests\Stubs\Stub1.cs">
+      <Link>Stubs\Stub1.cs</Link>
+    </Compile>
+    <Compile Include="..\HelperSharp.UnitTests\Stubs\Stub2.cs">
+      <Link>Stubs\Stub2.cs</Link>
+    </Compile>
+    <Compile Include="..\HelperSharp.UnitTests\Stubs\StubBase.cs">
+      <Link>Stubs\StubBase.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HelperSharp.Pcl\HelperSharp.Pcl.csproj">
+      <Project>{92FE15FC-4FD4-4743-8E7B-EC74FF77DD03}</Project>
+      <Name>HelperSharp.Pcl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Stubs\" />
+  </ItemGroup>
+</Project>
