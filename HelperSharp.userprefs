@@ -1,9 +1,11 @@
 ﻿<Properties StartupItem="HelperSharp/HelperSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="HelperSharp.UnitTests/StringExtensionsTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HelperSharp/ObjectHelper.cs">
     <Files>
       <File FileName="HelperSharp.UnitTests/ObjectHelperTest.cs" Line="1" Column="1" />
-      <File FileName="HelperSharp.UnitTests/StringExtensionsTest.cs" Line="26" Column="26" />
+      <File FileName="HelperSharp.UnitTests/StringExtensionsTest.cs" Line="1" Column="1" />
+      <File FileName="HelperSharp.Pcl/Properties/AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="HelperSharp/ObjectHelper.cs" Line="3" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

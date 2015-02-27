@@ -8,8 +8,8 @@
     <OutputType>Library</OutputType>
     <RootNamespace>HelperSharp.Pcl</RootNamespace>
     <AssemblyName>HelperSharp.Pcl</AssemblyName>
-    <TargetFrameworkProfile>Profile92</TargetFrameworkProfile>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,5 +57,4 @@
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
