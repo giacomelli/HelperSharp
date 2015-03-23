@@ -111,6 +111,7 @@ In others words, you can use this library for developement any kind of software:
 #Change Log
 
 ###HelperSharp
+* 0.0.4.2: Sign the assembly. 
 * 0.0.4.0:
 	* Created Helper.WebApi package.
 	* Added:
@@ -120,8 +121,14 @@ In others words, you can use this library for developement any kind of software:
 	* Added:
 		* StringExtensions.ContainsIgnoreCase
 		* ExpressionHelper.GetMemberExpression
-* 0.0.0.1 Initial version.
+* 0.0.0.1: Initial version.
 
 ###HelperSharp.Mvc
-* 0.0.1 Initial version.
-* 0.0.2 Added ByteExtensions.
+* 0.0.3: Sign the assembly.
+* 0.0.2: Added ByteExtensions.
+* 0.0.1: Initial version.
+
+
+###HelperSharp.WebApi
+* 0.0.2: Sign the assembly.
+* 0.0.1: Initial version.

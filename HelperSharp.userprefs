@@ -1,18 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="HelperSharp/GravatarHelper.cs">
-    <Files>
-      <File FileName="HelperSharp/GravatarHelper.cs" Line="11" Column="6" />
-      <File FileName="HelperSharp.UnitTests/GravatarHelperTest.cs" Line="25" Column="68" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State expanded="True">
+        <State expanded="True" selected="True">
           <Node name="HelperSharp.UnitTests" expanded="True">
             <Node name="HelperSharp" expanded="True">
-              <Node name="UnitTests" expanded="True">
-                <Node name="GravatarHelperTest" expanded="True" selected="True" />
-              </Node>
+              <Node name="UnitTests" expanded="True" />
             </Node>
           </Node>
         </State>
