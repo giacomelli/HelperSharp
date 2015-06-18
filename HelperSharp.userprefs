@@ -1,12 +1,17 @@
-﻿<Properties StartupItem="HelperSharp/HelperSharp.csproj">
+﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="HelperSharp/ObjectHelper.cs">
-    <Files>
-      <File FileName="HelperSharp.UnitTests/ObjectHelperTest.cs" Line="1" Column="1" />
-      <File FileName="HelperSharp.UnitTests/StringExtensionsTest.cs" Line="1" Column="1" />
-      <File FileName="HelperSharp.Pcl/Properties/AssemblyInfo.cs" Line="1" Column="1" />
-      <File FileName="HelperSharp/ObjectHelper.cs" Line="3" Column="3" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True" selected="True">
+          <Node name="HelperSharp.UnitTests" expanded="True">
+            <Node name="HelperSharp" expanded="True">
+              <Node name="UnitTests" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
