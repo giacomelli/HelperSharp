@@ -1,9 +1,5 @@
-language: c
- 
-install:
-  - sudo apt-get install mono-devel mono-gmcs nunit-console
-  - mozroots --import --sync
- 
+language: csharp
+solution: HelperSharp.sln
 script:
   - xbuild ./HelperSharp.sln /property:"Configuration=Debug;Platform=Any CPU"
   - nunit-console ./HelperSharp.UnitTests/bin/Debug/HelperSharp.UnitTests.dll
