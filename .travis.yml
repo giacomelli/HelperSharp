@@ -1,7 +1,7 @@
 language: csharp
 solution: HelperSharp.sln
 install:
-  - nuget restore sHelperSharp.sln
+  - nuget restore HelperSharp.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
   - xbuild ./HelperSharp.sln /property:"Configuration=Debug;Platform=Any CPU"
