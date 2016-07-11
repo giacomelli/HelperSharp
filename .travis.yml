@@ -1,5 +1,8 @@
 language: csharp
 solution: HelperSharp.sln
+install:
+  - nuget restore sHelperSharp.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
   - xbuild ./HelperSharp.sln /property:"Configuration=Debug;Platform=Any CPU"
-  - nunit-console ./HelperSharp.UnitTests/bin/Debug/HelperSharp.UnitTests.dll
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./HelperSharp.UnitTests/bin/Debug/HelperSharp.UnitTests.dll
