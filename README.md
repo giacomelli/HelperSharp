@@ -1,4 +1,4 @@
-HelperSharp
+HelperSharp  
 =========
 [![Build Status](https://travis-ci.org/giacomelli/HelperSharp.png?branch=master)](https://travis-ci.org/giacomelli/HelperSharp)
 
@@ -30,7 +30,7 @@ Helpers
 * **GravatarHelper**
 	* GetAvatarUrl: gets the avatar URL for the specified e-mail.
 * **MD5Helper**
-	* Encrypt: encrypt the specified string using MD5 algorithm.	
+	* Encrypt: encrypt the specified string using MD5 algorithm.
 	* IsEncrypted: check if the specified string is encrypted using MD5.
 * **ObjectHelper**
 	* IsNullOrDefault&lt;T&gt;: check if argument is null or default value of T type.
@@ -78,7 +78,7 @@ Extensions
 	* With: format the specified string. Is a String.Format(CultureInfo.InvariantCulture,..) shortcut.
 	* Capitalize: capitalize the string.
 	* ContainsIgnoreCase: returns a value indicating whether the specified substring occurs within this string.
-	
+
 
 MVC
 ------
@@ -101,7 +101,7 @@ Extensions
 ------
 * **HttpRequestMessageExtensions**
 	* IsLocal: check if is a local request.
-	
+
 #License
 
 Licensed under the The MIT License (MIT).
@@ -111,13 +111,13 @@ In others words, you can use this library for developement any kind of software:
 #Change Log
 
 ###HelperSharp
-* 0.0.4.2: Sign the assembly. 
+* 0.0.4.2: Sign the assembly.
 * 0.0.4.0:
 	* Created Helper.WebApi package.
 	* Added:
 		* MD5Helper
 		* ObjectHelper.CreateShallowCopy.
-* 0.0.3.7	
+* 0.0.3.7
 	* Added:
 		* StringExtensions.ContainsIgnoreCase
 		* ExpressionHelper.GetMemberExpression
