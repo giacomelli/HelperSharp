@@ -1,22 +1,18 @@
-HelperSharp  
-=========
+# HelperSharp  
 [![Build Status](https://travis-ci.org/giacomelli/HelperSharp.png?branch=master)](https://travis-ci.org/giacomelli/HelperSharp)
 
 A set of helpers and extensions for C# programming.
 
-Setup
-=========
+## Setup
 
-NuGet
-------
+### NuGet
 PM> Install-Package HelperSharp
 PM> Install-Package HelperSharp.Mvc
 PM> Install-Package HelperSharp.WebApi
 
-Features
-=========
-Helpers
-------
+## Features
+
+### Helpers
 * **CurrencyHelper**
 	* IsValidIsoCurrencySymbol: determines if is valid ISO currency symbol.
 * **EnumerableHelper**
@@ -41,8 +37,7 @@ Helpers
 	* InvokeMethod: invokes the method with the specified parameters.
 	* GetSubclassesOf: gets the subclasses of the specified type.
 
-Extensions
-------
+### Extensions
 * **ArrayExtensions**
 	* RemoveDuplicates&lt;T&gt;: removes the duplicates items from array.
 * **CharExtensions**
@@ -80,55 +75,23 @@ Extensions
 	* ContainsIgnoreCase: returns a value indicating whether the specified substring occurs within this string.
 
 
-MVC
-------
+## MVC
 
-Helpers
-------
+### Helpers
 * **ControllerHelper**
 	* GetControllerTypes: gets all concrete controller types.
 	* GetActionsDescriptors: gets all actions descriptors of the controller.
 
-Extensions
-------
+### Extensions
 * **ByteExtensions**
 	* SendOverHttp: send the byte array content over HTTP current response.
 
-WebApi
-------
+## WebApi
 
-Extensions
-------
+### Extensions
 * **HttpRequestMessageExtensions**
 	* IsLocal: check if is a local request.
 
-#License
-
+## License
 Licensed under the The MIT License (MIT).
 In others words, you can use this library for developement any kind of software: open source, commercial, proprietary and alien.
-
-
-#Change Log
-
-###HelperSharp
-* 0.0.4.2: Sign the assembly.
-* 0.0.4.0:
-	* Created Helper.WebApi package.
-	* Added:
-		* MD5Helper
-		* ObjectHelper.CreateShallowCopy.
-* 0.0.3.7
-	* Added:
-		* StringExtensions.ContainsIgnoreCase
-		* ExpressionHelper.GetMemberExpression
-* 0.0.0.1: Initial version.
-
-###HelperSharp.Mvc
-* 0.0.3: Sign the assembly.
-* 0.0.2: Added ByteExtensions.
-* 0.0.1: Initial version.
-
-
-###HelperSharp.WebApi
-* 0.0.2: Sign the assembly.
-* 0.0.1: Initial version.
