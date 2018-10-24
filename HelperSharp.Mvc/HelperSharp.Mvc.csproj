@@ -85,7 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HelperSharp\HelperSharp.csproj">
-      <Project>{25E1AB57-401D-43EF-8E89-36CD59EBB9BB}</Project>
+      <Project>{e19bd54e-9227-4ccc-bc85-a17000667886}</Project>
       <Name>HelperSharp</Name>
     </ProjectReference>
   </ItemGroup>
