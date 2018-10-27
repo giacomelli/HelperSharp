@@ -6,9 +6,11 @@ A set of helpers and extensions for C# programming.
 ## Setup
 
 ### NuGet
-PM> Install-Package HelperSharp
-PM> Install-Package HelperSharp.Mvc
-PM> Install-Package HelperSharp.WebApi
+```shell
+Install-Package HelperSharp
+Install-Package HelperSharp.Mvc
+Install-Package HelperSharp.WebApi
+```
 
 ## Features
 
