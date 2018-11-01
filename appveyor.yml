@@ -1,0 +1,43 @@
+skip_tags: true
+version: 0.5.{build}
+configuration: Release
+
+# configure environment / install required software in build process
+install:
+  - cinst nunit
+  - cinst 7zip.commandline
+  - cinst GitVersion.Portable
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+  - ps: GitVersion /output buildserver /updateassemblyinfo true
+  - ps: $env:GIT_PRE_RELEASE = !$env:GitVersion_BranchName.Equals("master")
+
+nuget:
+  account_feed: true
+  project_feed: true
+
+# restore nuget packages before build
+before_build:
+  - nuget restore .\HelperSharp.sln
+
+# build configuration
+build:
+  project: .\HelperSharp.sln
+  verbosity: minimal
+
+# create nuget packages =]
+after_build:
+  - nuget pack .\HelperSharp\HelperSharp.csproj -OutputDirectory .\src\nuget
+
+# push artifacts
+artifacts:
+  - path: .\src\nuget\*.nupkg
+
+deploy:
+  - provider: GitHub
+    tag: v$(GitVersion_SemVer)
+    release: v$(GitVersion_SemVer)
+    auth_token:
+      secure: iHyv/sJYu1rzs66O1fn0FECET2w27wKKUUEzqwvqV4uL5DvlZa7FwpM7LKdxgV6E
+    draft: false
+    prerelease: $(GIT_PRE_RELEASE)
+    artifact: /.*\.nupkg/
