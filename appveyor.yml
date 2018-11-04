@@ -4,10 +4,6 @@ configuration: Release
 
 # configure environment / install required software in build process
 install:
-  #- cinst nunit
-  #- cinst 7zip.commandline
-  #- cinst GitVersion.Portable
-  #- nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
   - ps: GitVersion /output buildserver /updateassemblyinfo true
   - ps: $env:GIT_PRE_RELEASE = !$env:GitVersion_BranchName.Equals("master")
 
@@ -26,13 +22,13 @@ build:
 
 # create nuget packages =]
 after_build:
-  - nuget pack .\HelperSharp\HelperSharp.csproj -OutputDirectory .\nuget
-  - nuget pack .\HelperSharp.Mvc\HelperSharp.Mvc.csproj -OutputDirectory .\nuget
-  - nuget pack .\HelperSharp.WebApi\HelperSharp.WebApi.csproj -OutputDirectory .\nuget
+  - nuget pack .\HelperSharp\HelperSharp.csproj -OutputDirectory .\build
+  - nuget pack .\HelperSharp.Mvc\HelperSharp.Mvc.csproj -OutputDirectory .\build
+  - nuget pack .\HelperSharp.WebApi\HelperSharp.WebApi.csproj -OutputDirectory .\build
 
 # push artifacts
 artifacts:
-  - path: .\nuget\*.nupkg
+  - path: .\build\*.nupkg
 
 deploy:
   - provider: GitHub
