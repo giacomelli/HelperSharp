@@ -26,7 +26,9 @@ build:
 
 # create nuget packages =]
 after_build:
-  - nuget pack .\HelperSharp\HelperSharp.csproj -OutputDirectory .\src\nuget
+  - nuget pack .\HelperSharp\HelperSharp.csproj -OutputDirectory .\nuget
+  - nuget pack .\HelperSharp.Mvc\HelperSharp.Mvc.csproj -OutputDirectory .\nuget
+  - nuget pack .\HelperSharp.WebApi\HelperSharp.WebApi.csproj -OutputDirectory .\nuget
 
 # push artifacts
 artifacts:
