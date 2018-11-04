@@ -1,5 +1,6 @@
 # HelperSharp  
 [![Build Status](https://travis-ci.org/giacomelli/HelperSharp.png?branch=master)](https://travis-ci.org/giacomelli/HelperSharp)
+[![Build status](https://ci.appveyor.com/api/projects/status/4v93gie8sriss5t2?svg=true)](https://ci.appveyor.com/project/eduardobursa/helpersharp)
 
 A set of helpers and extensions for C# programming.
 
