@@ -32,7 +32,7 @@ after_build:
 
 # push artifacts
 artifacts:
-  - path: .\src\nuget\*.nupkg
+  - path: .\nuget\*.nupkg
 
 deploy:
   - provider: GitHub
