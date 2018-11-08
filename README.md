@@ -1,12 +1,23 @@
 # HelperSharp  
-[![Build Status](https://travis-ci.org/giacomelli/HelperSharp.png?branch=master)](https://travis-ci.org/giacomelli/HelperSharp)
-[![Build status](https://ci.appveyor.com/api/projects/status/4v93gie8sriss5t2?svg=true)](https://ci.appveyor.com/project/eduardobursa/helpersharp)
-
 A set of helpers and extensions for C# programming.
+
+[![Build Status](https://travis-ci.org/giacomelli/HelperSharp.png?branch=develop)](https://travis-ci.org/giacomelli/HelperSharp)
+[![Build status](https://ci.appveyor.com/api/projects/status/4v93gie8sriss5t2/branch/develop?svg=true)](https://ci.appveyor.com/project/eduardobursa/helpersharp/branch/develop)
+[![Coverage Status](https://coveralls.io/repos/github/eduardobursa/HelperSharp/badge.svg?branch=develop)](https://coveralls.io/github/eduardobursa/HelperSharp?branch=develop)
+
+[![Build Status](https://travis-ci.org/giacomelli/HelperSharp.png?branch=master)](https://travis-ci.org/giacomelli/HelperSharp)
+[![Build status](https://ci.appveyor.com/api/projects/status/4v93gie8sriss5t2/branch/master?svg=true)](https://ci.appveyor.com/project/eduardobursa/helpersharp/branch/master)
+[![Coverage Status](https://coveralls.io/repos/github/eduardobursa/HelperSharp/badge.svg?branch=master)](https://coveralls.io/github/eduardobursa/HelperSharp?branch=master)
+
 
 ## Setup
 
 ### NuGet
+
+[![NuGet](https://img.shields.io/nuget/v/HelperSharp.svg)](https://www.nuget.org/packages/HelperSharp/)
+[![NuGet](https://img.shields.io/nuget/v/HelperSharp.Mvc.svg)](https://www.nuget.org/packages/HelperSharp.Mvc/)
+[![NuGet](https://img.shields.io/nuget/v/HelperSharp.WebApi.svg)](https://www.nuget.org/packages/HelperSharp.WebApi/)
+
 ```shell
 Install-Package HelperSharp
 Install-Package HelperSharp.Mvc
