@@ -1,0 +1,50 @@
+skip_tags: true
+version: 0.5.{build}
+configuration: Release
+
+# configure environment / install required software in build process
+install:
+  - cinst nunit
+  - ps: GitVersion /output buildserver /updateassemblyinfo true
+  - ps: $env:GIT_PRE_RELEASE = !$env:GitVersion_BranchName.Equals("master")
+
+environment:
+  COVERALLS_REPO_TOKEN:
+    secure: isM+f0sxaA9fwv+Cs63/C0ot1OluStwWfCmUsDN3yRm/x0dwZdsRrQUM5UqB8k6G
+
+nuget:
+  account_feed: true
+  project_feed: true
+
+# restore nuget packages before build
+before_build:
+  - nuget restore .\HelperSharp.sln
+
+# build configuration
+build:
+  project: .\HelperSharp.sln
+  verbosity: minimal
+
+test_script:
+  - ps: .\packages\OpenCover.4.6.166\tools\OpenCover.Console.exe -register:user -target:nunit-console.exe -register:user "-targetargs:""HelperSharp.UnitTests\bin\$env:CONFIGURATION\HelperSharp.UnitTests.dll"" /noshadow" -filter:"+[HelperSharp.*]*" -output:opencoverCoverage.xml
+  - ps: .\packages\coveralls.io.1.4.2\tools\coveralls.net.exe --opencover -f opencoverCoverage.xml -r $env:COVERALLS_REPO_TOKEN
+
+# create nuget packages =]
+after_build:
+  - nuget pack .\HelperSharp\HelperSharp.csproj -OutputDirectory .\build
+  - nuget pack .\HelperSharp.Mvc\HelperSharp.Mvc.csproj -OutputDirectory .\build
+  - nuget pack .\HelperSharp.WebApi\HelperSharp.WebApi.csproj -OutputDirectory .\build
+
+# push artifacts
+artifacts:
+  - path: .\build\*.nupkg
+
+deploy:
+  - provider: GitHub
+    tag: v$(GitVersion_SemVer)
+    release: v$(GitVersion_SemVer)
+    auth_token:
+      secure: N8V6KXkCcQFhvrfDUYgzK9WmFdT88Y6WlgSSo6MkGESrrto3feqZOGWvQ6BdWB9m
+    draft: false
+    prerelease: $(GIT_PRE_RELEASE)
+    artifact: /.*\.nupkg/
