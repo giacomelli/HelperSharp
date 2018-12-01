@@ -10,7 +10,7 @@ install:
 
 environment:
   COVERALLS_REPO_TOKEN:
-    secure: isM+f0sxaA9fwv+Cs63/C0ot1OluStwWfCmUsDN3yRm/x0dwZdsRrQUM5UqB8k6G
+    secure: eZ3/FvZ+KyMVMU2nwHII8pY+x3u2pzmwsNOmMlIHXibKlt9UoCkTVsRqsjP/1B/q
 
 nuget:
   account_feed: true
