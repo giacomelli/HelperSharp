@@ -44,7 +44,7 @@ deploy:
     tag: v$(GitVersion_SemVer)
     release: v$(GitVersion_SemVer)
     auth_token:
-      secure: N8V6KXkCcQFhvrfDUYgzK9WmFdT88Y6WlgSSo6MkGESrrto3feqZOGWvQ6BdWB9m
+      secure: OnZnd5dxSeZL6cRd4bE7zPhtZoJYiYqlOgi3SPbkZsJcD/0ko7P3lpo0UBO1NSN/
     draft: false
     prerelease: $(GIT_PRE_RELEASE)
     artifact: /.*\.nupkg/
