@@ -2,19 +2,21 @@
 
   <PropertyGroup>
     <TargetFrameworks>net35;net40;netstandard2.0</TargetFrameworks>
-	<Authors>Diego Giacomelli</Authors>
-	<version>0.0.5.0</version>
-	<Company>Skahal Studios</Company>
+	  <Authors>Diego Giacomelli</Authors>
+	  <version>0.0.5.0</version>
+	  <Company>Skahal Studios</Company>
     <Description>A set of helpers and extensions.</Description>
-	<Copyright>giacomelli</Copyright>
-	<PackageProjectUrl>https://github.com/giacomelli/HelperSharp</PackageProjectUrl>
-	<RequireLicenseAcceptance>false</RequireLicenseAcceptance>
-	<PackageReleaseNotes>Sign the assembly.</PackageReleaseNotes>
+	  <Copyright>giacomelli</Copyright>
+	  <PackageProjectUrl>https://github.com/giacomelli/HelperSharp</PackageProjectUrl>
+	  <RequireLicenseAcceptance>false</RequireLicenseAcceptance>
+	  <PackageReleaseNotes>Sign the assembly.</PackageReleaseNotes>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>HelperSharp.snk</AssemblyOriginatorKeyFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   
   <PropertyGroup>
     <FrameworkPathOverride Condition="'$(TargetFramework)' == 'net35'">$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client</FrameworkPathOverride>
   </PropertyGroup>
+
 </Project>
