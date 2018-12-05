@@ -1,5 +1,6 @@
 skip_tags: true
 version: 0.5.{build}
+os: Visual Studio 2017
 configuration: Release
 
 # configure environment / install required software in build process
@@ -31,7 +32,7 @@ test_script:
 
 # create nuget packages =]
 after_build:
-  - nuget pack .\HelperSharp\HelperSharp.csproj -OutputDirectory .\build
+  - dotnet pack .\HelperSharp\HelperSharp.csproj -c release --no-build --output .\build
   - nuget pack .\HelperSharp.Mvc\HelperSharp.Mvc.csproj -OutputDirectory .\build
   - nuget pack .\HelperSharp.WebApi\HelperSharp.WebApi.csproj -OutputDirectory .\build
 
