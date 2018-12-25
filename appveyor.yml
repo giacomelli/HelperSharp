@@ -32,7 +32,7 @@ test_script:
 
 # create nuget packages =]
 after_build:
-  - dotnet pack .\HelperSharp\HelperSharp.csproj -c release -o ..\build --no-build
+  - dotnet pack .\HelperSharp\HelperSharp.csproj -c release -o ..\build -p:PackageVersion=$env:GitVersion_SemVer --no-build
   - nuget pack .\HelperSharp.Mvc\HelperSharp.Mvc.csproj -OutputDirectory .\build
   - nuget pack .\HelperSharp.WebApi\HelperSharp.WebApi.csproj -OutputDirectory .\build
 
