@@ -33,8 +33,8 @@ test_script:
 # create nuget packages =]
 after_build:
   - ps: dotnet pack .\HelperSharp\HelperSharp.csproj -c release -o ..\build -p:PackageVersion=$env:GitVersion_SemVer --no-build
-  - ps: nuget pack .\HelperSharp.Mvc\HelperSharp.Mvc.csproj -OutputDirectory .\build
-  - ps: nuget pack .\HelperSharp.WebApi\HelperSharp.WebApi.csproj -OutputDirectory .\build
+  - nuget pack .\HelperSharp.Mvc\HelperSharp.Mvc.csproj -OutputDirectory .\build
+  - nuget pack .\HelperSharp.WebApi\HelperSharp.WebApi.csproj -OutputDirectory .\build
 
 # push artifacts
 artifacts:
