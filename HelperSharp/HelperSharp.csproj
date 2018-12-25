@@ -25,6 +25,7 @@
     <AssemblyOriginatorKeyFile>HelperSharp.snk</AssemblyOriginatorKeyFile>
     <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
   </PropertyGroup>
 
   <!-- nuget package info -->
