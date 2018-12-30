@@ -27,7 +27,7 @@ build:
   verbosity: minimal
 
 test_script:
-  - ps: .\packages\OpenCover.4.6.166\tools\OpenCover.Console.exe -register:user -target:nunit-console.exe -register:user "-targetargs:""HelperSharp.UnitTests\bin\$env:CONFIGURATION\HelperSharp.UnitTests.dll"" /noshadow" -filter:"+[HelperSharp.*]*" -output:opencoverCoverage.xml
+  - ps: .\packages\OpenCover.4.6.166\tools\OpenCover.Console.exe -register:user -target:nunit-console.exe -register:user "-targetargs:""HelperSharp.UnitTests\bin\$env:CONFIGURATION\HelperSharp.UnitTests.dll"" /noshadow" -filter:"+[HelperSharp.UnitTests]*" -output:opencoverCoverage.xml
   - ps: .\packages\coveralls.io.1.4.2\tools\coveralls.net.exe --opencover -f opencoverCoverage.xml -r $env:COVERALLS_REPO_TOKEN
 
 # create nuget packages =]
