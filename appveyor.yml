@@ -20,7 +20,7 @@ nuget:
 # restore nuget packages before build
 before_build:
   - dotnet --version
-  - dotnet restore .\HelperSharp.sln
+  - nuget restore .\HelperSharp.sln
 
 # build configuration
 build:
