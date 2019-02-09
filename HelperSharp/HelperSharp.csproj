@@ -1,68 +1,48 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- targets -->
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{25E1AB57-401D-43EF-8E89-36CD59EBB9BB}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>HelperSharp</RootNamespace>
-    <AssemblyName>HelperSharp</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworks>net35;net40;netstandard2.0</TargetFrameworks>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;CODE_ANALYSIS</DefineConstants>
+
+  <!-- build -->
+  <PropertyGroup>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <DocumentationFile>bin\Debug\HelperSharp.xml</DocumentationFile>
+    <RestorePackages>true</RestorePackages>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath> 
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>none</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <DocumentationFile>bin\Release\HelperSharp.XML</DocumentationFile>
-  </PropertyGroup>
+
+  <!-- assembly info -->
   <PropertyGroup>
+    <AssemblyTitle>HelperSharp</AssemblyTitle>
+    <Company>Skahal Studios</Company>
+    <Copyright>Diego Giacomelli, http://diegogiacomelli.com.br</Copyright>
+    <Description>A set of helpers and extensions for C# programming.</Description>
     <SignAssembly>true</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
     <AssemblyOriginatorKeyFile>HelperSharp.snk</AssemblyOriginatorKeyFile>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="MD5Helper.cs" />
-    <Compile Include="NameValueCollectionExtensions.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs">
-      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
-    </Compile>
-    <Compile Include="CurrencyHelper.cs" />
-    <Compile Include="CharExtensions.cs" />
-    <Compile Include="ConvertibleExtensions.cs" />
-    <Compile Include="ReflectionHelper.cs" />
-    <Compile Include="GravatarHelper.cs" />
-    <Compile Include="ArrayExtensions.cs" />
-    <Compile Include="DateTimeExtensions.cs" />
-    <Compile Include="EnumerableExtensions.cs" />
-    <Compile Include="EnumerableHelper.cs" />
-    <Compile Include="ExceptionHelper.cs" />
-    <Compile Include="ExpressionHelper.cs" />
-    <Compile Include="ObjectHelper.cs" />
-    <Compile Include="StringExtensions.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="HelperSharp.snk" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+
+  <!-- nuget package info -->
+  <PropertyGroup>
+    <Authors>Diego Giacomelli</Authors>
+    <Owners>g1acomell1</Owners>
+    <PackageId>HelperSharp</PackageId>
+    <PackageProjectUrl>https://github.com/giacomelli/HelperSharp</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/giacomelli/HelperSharp/blob/master/LICENSE</PackageLicenseUrl>
+    <RequireLicenseAcceptance>false</RequireLicenseAcceptance>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/giacomelli/HelperSharp.git</RepositoryUrl>
+    <PackageReleaseNotes>See changes at https://github.com/giacomelli/HelperSharp.</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <FrameworkPathOverride Condition="'$(TargetFramework)' == 'net35'">$(MSBuildProgramFiles32)\Reference Assemblies\Microsoft\Framework\.NETFramework\v3.5\Profile\Client</FrameworkPathOverride>
+  </PropertyGroup>
+
 </Project>
