@@ -1,13 +1,9 @@
 # HelperSharp  
 A set of helpers and extensions for C# programming.
 
-[![Build Status](https://travis-ci.org/giacomelli/HelperSharp.png?branch=develop)](https://travis-ci.org/giacomelli/HelperSharp)
-[![Build status](https://ci.appveyor.com/api/projects/status/4v93gie8sriss5t2/branch/develop?svg=true)](https://ci.appveyor.com/project/eduardobursa/helpersharp/branch/develop)
-[![Coverage Status](https://coveralls.io/repos/github/eduardobursa/HelperSharp/badge.svg?branch=develop)](https://coveralls.io/github/eduardobursa/HelperSharp?branch=develop)
-
 [![Build Status](https://travis-ci.org/giacomelli/HelperSharp.png?branch=master)](https://travis-ci.org/giacomelli/HelperSharp)
-[![Build status](https://ci.appveyor.com/api/projects/status/4v93gie8sriss5t2/branch/master?svg=true)](https://ci.appveyor.com/project/eduardobursa/helpersharp/branch/master)
-[![Coverage Status](https://coveralls.io/repos/github/eduardobursa/HelperSharp/badge.svg?branch=master)](https://coveralls.io/github/eduardobursa/HelperSharp?branch=master)
+[![Build status](https://ci.appveyor.com/api/projects/status/405psvp57ynsky83/branch/master?svg=true)](https://ci.appveyor.com/project/giacomelli/helpersharp/branch/master)
+[![Coverage Status](https://coveralls.io/repos/github/giacomelli/HelperSharp/badge.svg?branch=master)](https://coveralls.io/github/giacomelli/HelperSharp?branch=master)
 
 
 ## Setup
